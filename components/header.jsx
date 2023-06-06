@@ -1,5 +1,5 @@
 import Image from 'next/image'
-
+import Link from 'next/link'
 export default function Header() {
   return (
     <>
@@ -36,6 +36,32 @@ export default function Header() {
           className="right"
         />
       </header>
+      <div className="header__nav">
+        <Link href="/">
+          <h3>O nas</h3>
+        </Link>
+        <Link href="/">
+          <h3>Aktualności</h3>
+        </Link>
+        <Link href="/">
+          <h3>Ogłoszenia</h3>
+        </Link>
+        <Link href="/">
+          <h3>Nasze pasje</h3>
+        </Link>
+        <Link href="/">
+          <h3>Galeria</h3>
+        </Link>
+        <Link href="/">
+          <h3>Dla rodziców</h3>
+        </Link>
+        <Link href="/">
+          <h3>Dokumentacja</h3>
+        </Link>
+        <Link href="/">
+          <h3>Kontakt</h3>
+        </Link>
+      </div>
     </>
   )
 }
