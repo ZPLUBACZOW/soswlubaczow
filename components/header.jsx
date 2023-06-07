@@ -8,7 +8,8 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentPosition = window.pageYOffset || document.documentElement.scrollTop
+      const currentPosition =
+        window.pageYOffset || document.documentElement.scrollTop
 
       setScrollPosition(currentPosition)
 
@@ -31,7 +32,7 @@ export default function Header() {
         <div className="header__container">
           <Image
             src="/header-image.svg"
-            alt="mazaika"
+            alt="mozaika"
             width="140"
             height="140"
             className="header__left"
