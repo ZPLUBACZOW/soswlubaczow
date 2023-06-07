@@ -1,67 +1,100 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
+
 export default function Header() {
+  const [scrollPosition, setScrollPosition] = useState(0)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentPosition = window.pageYOffset || document.documentElement.scrollTop
+
+      setScrollPosition(currentPosition)
+
+      if (currentPosition >= 145) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <>
       <header className="header">
-        <Image
-          src="/header-image.svg"
-          alt="mazaika"
-          width="140"
-          height="140"
-          className="header__left"
-        />
-
-        <div className="header__center">
+        <div className="header__container">
           <Image
-            src="/Logo.svg"
-            alt=""
-            width="100"
-            height="100"
-            className="header__logo"
+            src="/header-image.svg"
+            alt="mazaika"
+            width="140"
+            height="140"
+            className="header__left"
           />
 
-          <h1>
-            <span>zespół placówek im. Jana Pawła II</span>
-            <br />
-            MŁODZIEŻOWY ORŚRODEK <br /> WYCHOWAWCZY W LUBACZOWIE
-          </h1>
+          <div className="header__center">
+            <Link href="/">
+              <Image
+                src="/Logo.svg"
+                alt=""
+                width="100"
+                height="100"
+                className="header__logo"
+              />
+            </Link>
+
+            <h1>
+              <span>zespół placówek im. Jana Pawła II</span>
+              <br />
+              MŁODZIEŻOWY ORŚRODEK <br /> WYCHOWAWCZY W LUBACZOWIE
+            </h1>
+          </div>
+
+          <Image
+            src="/header-image.svg"
+            alt="mazaika"
+            width="140"
+            height="140"
+            className="right"
+          />
         </div>
 
-        <Image
-          src="/header-image.svg"
-          alt="mazaika"
-          width="140"
-          height="140"
-          className="right"
-        />
+        <nav className={`header__nav ${isScrolled ? 'fixed' : ''}`}>
+          <div className="header__nav--figure"></div>
+
+          <ul>
+            <Link href="/">
+              <li>O nas</li>
+            </Link>
+            <Link href="/">
+              <li>Aktualności</li>
+            </Link>
+            <Link href="/">
+              <li>Ogłoszenia</li>
+            </Link>
+            <Link href="/">
+              <li>Nasze pasje</li>
+            </Link>
+            <Link href="/">
+              <li>Galeria</li>
+            </Link>
+            <Link href="/">
+              <li>Dla rodziców</li>
+            </Link>
+            <Link href="/">
+              <li>Dokumentacja</li>
+            </Link>
+            <Link href="/">
+              <li>Kontakt</li>
+            </Link>
+          </ul>
+        </nav>
       </header>
-      <div className="header__nav">
-        <Link href="/">
-          <h3>O nas</h3>
-        </Link>
-        <Link href="/">
-          <h3>Aktualności</h3>
-        </Link>
-        <Link href="/">
-          <h3>Ogłoszenia</h3>
-        </Link>
-        <Link href="/">
-          <h3>Nasze pasje</h3>
-        </Link>
-        <Link href="/">
-          <h3>Galeria</h3>
-        </Link>
-        <Link href="/">
-          <h3>Dla rodziców</h3>
-        </Link>
-        <Link href="/">
-          <h3>Dokumentacja</h3>
-        </Link>
-        <Link href="/">
-          <h3>Kontakt</h3>
-        </Link>
-      </div>
     </>
   )
 }
