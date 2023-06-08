@@ -2,11 +2,27 @@
 $white: #fff;
 $black: #000;
 $mainGreen: #0e612f;
+$textColor: #1e1e1e;
 
-//* Flex tamplate
+//* Flex template
 @mixin setFlex($flex-direction, $justify-content: center, $align-items: center) {
   display: flex;
   flex-direction: $flex-direction;
   justify-content: $justify-content;
   align-items: $align-items;
+}
+
+//* Grid template
+@mixin setGrid($columns, $gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+//* Clamp template
+@mixin setClamp($line-clamp: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line-clamp;
+  overflow: hidden;
 }

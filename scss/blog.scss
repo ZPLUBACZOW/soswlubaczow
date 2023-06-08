@@ -1,0 +1,46 @@
+@use './variables' as *;
+
+.main-blog {
+  margin-inline: auto;
+  margin-top: 40px;
+  width: min(1280px, 100%);
+
+  &__title {
+    margin-top: 80px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 2.5rem;
+    color: $textColor;
+  }
+  &__container {
+    width: 100%;
+    @include setGrid(3, 40px);
+
+    @media all and (width <= 1280px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media all and (width <= 840px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__article {
+    margin-inline: auto;
+    width: 400px;
+    max-height: 500px;
+    transition: 0.4s scale;
+
+    &:hover {
+      scale: 1.05;
+    }
+    h2 {
+      margin-bottom: 5px;
+      color: $textColor;
+      font-size: 1.6rem;
+      @include setClamp(2);
+    }
+    img {
+      border-radius: 5px;
+      object-fit: cover;
+    }
+  }
+}

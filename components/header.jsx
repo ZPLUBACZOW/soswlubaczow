@@ -8,12 +8,11 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentPosition =
-        window.pageYOffset || document.documentElement.scrollTop
+      const currentPosition = window.pageYOffset || document.documentElement.scrollTop
 
       setScrollPosition(currentPosition)
 
-      if (currentPosition >= 145) {
+      if (currentPosition >= 140) {
         setIsScrolled(true)
       } else {
         setIsScrolled(false)
@@ -65,6 +64,7 @@ export default function Header() {
           />
         </div>
 
+        <div className={isScrolled ? 'holder' : ''}></div>
         <nav className={`header__nav ${isScrolled ? 'fixed' : ''}`}>
           <div className="header__nav--figure"></div>
 
@@ -72,10 +72,10 @@ export default function Header() {
             <Link href="/">
               <li>O nas</li>
             </Link>
-            <Link href="/">
+            <Link href="/aktualnosci">
               <li>Aktualności</li>
             </Link>
-            <Link href="/">
+            <Link href="/ogloszenia">
               <li>Ogłoszenia</li>
             </Link>
             <Link href="/">
