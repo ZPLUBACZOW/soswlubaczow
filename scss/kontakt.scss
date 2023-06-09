@@ -5,35 +5,36 @@ body {
 }
 
 //* Main
-.main-page {
+.main-kontakt {
   margin: auto;
   max-width: 1180px;
 
-  & h2 {
-    margin-bottom: 0px;
-    text-align: center;
+  & h3 {
+    width: 800px;
   }
   & img {
     object-fit: cover;
-    border-radius: 66px;
   }
   &__title {
     margin-top: 80px;
     height: auto;
-    @include setFlex(column);
+    @include setFlex(column, center, center);
     font-size: 20px;
     text-align: center;
-    border-bottom: solid 3px #49d380;
+    border-bottom: solid 4px #49d380;
   }
   & span {
-    color: $mainGreen;
+    color: #930d0d;
   }
   &__description {
     padding-top: 50px;
     height: auto;
     width: 100%;
     margin: auto;
-    @include setFlex(row, center, center);
+    @include setFlex(column, center, center);
     gap: 2%;
+    font-size: 20px;
+    border-bottom: solid 4px #49d380;
+    text-align: center;
   }
 }

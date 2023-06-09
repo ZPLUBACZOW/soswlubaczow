@@ -8,7 +8,8 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentPosition = window.pageYOffset || document.documentElement.scrollTop
+      const currentPosition =
+        window.pageYOffset || document.documentElement.scrollTop
 
       setScrollPosition(currentPosition)
 
@@ -90,7 +91,7 @@ export default function Header() {
             <Link href="/">
               <li>Dokumentacja</li>
             </Link>
-            <Link href="/">
+            <Link href="/kontakt">
               <li>Kontakt</li>
             </Link>
           </ul>
