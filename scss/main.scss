@@ -5,57 +5,35 @@ body {
 }
 
 //* Main
-.container {
+.main-page {
   margin: auto;
   max-width: 1280px;
 
-  h2 {
+  & h2 {
     margin-bottom: 0px;
     text-align: center;
   }
-
-  .main-title {
+  & img {
+    object-fit: cover;
+    border-radius: 66px;
+  }
+  &__title {
     margin-top: 80px;
     height: auto;
     @include setFlex(column);
     font-size: 20px;
     text-align: center;
+    border-bottom: solid 3px #49d380;
   }
-  span {
+  & span {
     color: $mainGreen;
   }
-  .main-description-first {
+  &__description {
     padding-top: 50px;
     height: auto;
     width: 100%;
     margin: auto;
-    @include setFlex(row, end, none);
+    @include setFlex(row, center, center);
     gap: 2%;
-    border-top: solid 3px #49d380;
-    img {
-      object-fit: cover;
-    }
-  }
-  .main-description-second {
-    width: 100%;
-    height: auto;
-    @include setFlex(row, center, none);
-    font-size: 18px;
-    margin-top: 50px;
-
-    h2 {
-      margin-left: 30px;
-    }
-    img {
-      object-fit: cover;
-    }
-  }
-  .main-description-last {
-    width: 100%;
-    height: auto;
-    @include setFlex(column);
-    font-size: 15px;
-    margin-top: 30px;
-    margin-bottom: 10vh;
   }
 }
