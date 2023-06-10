@@ -2,15 +2,8 @@ import Blog from '@/template/blog'
 import client from '@/lib/apollo-client'
 import { gql } from '@apollo/client'
 
-export default function Aktualnosci({ hypers }) {
-  return (
-    <Blog
-      tiles={true}
-      Pagetitle="Aktualności"
-      title="Najnowsze wiadomości!!"
-      props={hypers}
-    />
-  )
+export default function Documents({ hypers }) {
+  return <Blog Pagetitle="Dokumenty" title="Dokumenty" props={hypers} />
 }
 
 export async function getStaticProps() {

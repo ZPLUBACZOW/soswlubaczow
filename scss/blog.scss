@@ -22,17 +22,62 @@
     @media all and (width <= 840px) {
       grid-template-columns: 1fr;
     }
+
+    &--list {
+      width: 100%;
+      @include setGrid(2, 80px);
+
+      @media all and (width <= 1280px) {
+        grid-template-columns: 1fr;
+      }
+    }
   }
-  &__article {
+  &__arrow {
+    width: 30px;
+    height: auto;
+    align-self: flex-end;
+  }
+  &__list {
+    width: 600px;
+    @include setFlex(row, flex-start);
+    gap: 25px;
+    transition: 0.4s scale;
+
+    &:hover {
+      scale: 1.05;
+    }
+    span {
+      width: 100%;
+      @include setFlex(column, center, flex-start);
+    }
+  }
+  &__date {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+    color: $secondGreen;
+    font-weight: bold;
+
+    &::before {
+      display: block;
+      width: 16px;
+      height: 16px;
+      content: url(/calendar.png);
+    }
+  }
+  &__tiles {
     margin-inline: auto;
     width: 400px;
-    max-height: 500px;
+    max-height: 550px;
+    @include setFlex(column, flex-start, flex-start);
     transition: 0.4s scale;
 
     &:hover {
       scale: 1.05;
     }
     h2 {
+      margin-top: 5px;
       margin-bottom: 5px;
       color: $textColor;
       font-size: 1.6rem;

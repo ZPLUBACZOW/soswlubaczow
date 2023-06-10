@@ -23,10 +23,10 @@ body {
     @include setFlex(column);
     font-size: 20px;
     text-align: center;
-    border-bottom: solid 3px #49d380;
+    border-bottom: solid 3px $secondGreen;
   }
   & span {
-    color: $mainGreen;
+    color: $secondGreen;
   }
   &__description {
     padding-top: 50px;
