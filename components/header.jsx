@@ -81,7 +81,7 @@ export default function Header() {
             <Link href="/">
               <li>Nasze pasje</li>
             </Link>
-            <Link href="/">
+            <Link href="/galeria">
               <li>Galeria</li>
             </Link>
             <Link href="/">

@@ -2,7 +2,7 @@ import { Layout } from '@/components/layout'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Blog({ tiles, Pagetitle, title, props }) {
+export default function Blog({ tiles, Pagetitle, title, props, galery }) {
   return (
     <Layout title={Pagetitle} styleName="blog">
       <h1 className="main-blog__title">{title}</h1>
@@ -12,7 +12,14 @@ export default function Blog({ tiles, Pagetitle, title, props }) {
           {props.map((prop, i) => (
             <Link href={prop.slug} key={i}>
               <div key={i} className="main-blog__tiles">
-                <p className="main-blog__date">{prop.releaseDate}</p>
+                {galery ? (
+                  <p className="main-blog__date">{prop.releaseDate}</p>
+                ) : (
+                  <div className="main-blog__galery">
+                    <p className="main-blog__date">{prop.releaseDate}</p>
+                    <p className="main-blog__galery--category">film</p>
+                  </div>
+                )}
                 <Image src={prop.image.url} alt={prop.title} width="400" height="350" />
                 <h2>{prop.title}</h2>
                 <Image

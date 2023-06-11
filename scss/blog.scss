@@ -66,6 +66,20 @@
       content: url(/calendar.png);
     }
   }
+  &__galery {
+    width: 100%;
+    @include setFlex(row, space-between);
+
+    p {
+      margin-bottom: 5px;
+    }
+    &--category {
+      padding-inline: 8px;
+      background-color: $secondGreen;
+      color: $white;
+      border-radius: 5px;
+    }
+  }
   &__tiles {
     margin-inline: auto;
     width: 400px;
