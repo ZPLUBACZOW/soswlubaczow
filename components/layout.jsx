@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from './header'
+import Footer from './footer'
 import { Inter } from '@next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -16,6 +17,7 @@ export const Layout = ({ children, title, styleName }) => {
       <div className={inter.className}>
         <Header />
         <main className={`main-${styleName}`}>{children}</main>
+        <Footer />
       </div>
     </>
   )

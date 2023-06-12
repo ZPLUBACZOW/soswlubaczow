@@ -13,12 +13,12 @@ export default function Blog({ tiles, Pagetitle, title, props, galery }) {
             <Link href={prop.slug} key={i}>
               <div key={i} className="main-blog__tiles">
                 {galery ? (
-                  <p className="main-blog__date">{prop.releaseDate}</p>
-                ) : (
                   <div className="main-blog__galery">
                     <p className="main-blog__date">{prop.releaseDate}</p>
                     <p className="main-blog__galery--category">film</p>
                   </div>
+                ) : (
+                  <p className="main-blog__date">{prop.releaseDate}</p>
                 )}
                 <Image src={prop.image.url} alt={prop.title} width="400" height="350" />
                 <h2>{prop.title}</h2>
