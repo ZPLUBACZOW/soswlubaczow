@@ -4,6 +4,7 @@
   margin-top: 100px;
   width: 100%;
   height: 200px;
+  box-shadow: 0px 0px 10px $black;
   background-color: $mainGreen;
   color: $white;
 
@@ -19,10 +20,26 @@
     @include setFlex(row, space-between);
   }
   &__description {
+    width: min(840px, 100%);
     height: 100%;
   }
   &__title {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+  }
+  &__text {
+    @include setFlex(row);
+    flex-wrap: wrap;
+    gap: 5%;
+    color: $otherText;
+
+    p {
+      font-size: 1rem;
+      margin: 10px;
+    }
+  }
+  &__autors {
+    text-align: center;
+    color: $otherText;
   }
 }
