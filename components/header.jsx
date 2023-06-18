@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 export default function Header() {
   const [scrollPosition, setScrollPosition] = useState(0)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isDroped, setIsDroped] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,13 +61,56 @@ export default function Header() {
             alt="mazaika"
             width="140"
             height="140"
-            className="right"
+            className="header__right"
           />
         </div>
 
         <div className={isScrolled ? 'holder' : ''}></div>
+
         <nav className={`header__nav ${isScrolled ? 'fixed' : ''}`}>
           <div className="header__nav--figure"></div>
+
+          <div className="header__menu">
+            <div
+              onClick={() => setIsDroped(!isDroped)}
+              className="header__menu--element"
+            />
+            <div
+              onClick={() => setIsDroped(!isDroped)}
+              className="header__menu--element"
+            />
+            <div
+              onClick={() => setIsDroped(!isDroped)}
+              className="header__menu--element"
+            />
+
+            <ol className={`header__menu--droped ${isDroped ? 'droped' : ''}`}>
+              <Link href="/">
+                <li>O nas</li>
+              </Link>
+              <Link href="/aktualnosci">
+                <li>Aktualności</li>
+              </Link>
+              <Link href="/ogloszenia">
+                <li>Ogłoszenia</li>
+              </Link>
+              <Link href="/">
+                <li>Nasze pasje</li>
+              </Link>
+              <Link href="/galeria">
+                <li>Galeria</li>
+              </Link>
+              <Link href="/">
+                <li>Dla rodziców</li>
+              </Link>
+              <Link href="/dokumenty">
+                <li>Dokumentacja</li>
+              </Link>
+              <Link href="/kontakt">
+                <li>Kontakt</li>
+              </Link>
+            </ol>
+          </div>
 
           <ul>
             <Link href="/">
