@@ -82,13 +82,17 @@
   }
   &__tiles {
     margin-inline: auto;
-    width: 400px;
-    max-height: 550px;
+    width: min(400px, 100%);
+    @media all and (width >= 400px) {
+      max-height: 550px;
+    }
     @include setFlex(column, flex-start, flex-start);
     transition: 0.4s scale;
 
-    &:hover {
-      scale: 1.05;
+    @media all and (width > 400px) {
+      &:hover {
+        scale: 1.05;
+      }
     }
     h2 {
       margin-top: 5px;
@@ -97,9 +101,14 @@
       font-size: 1.6rem;
       @include setClamp(2);
     }
-    img {
+    &--image {
       border-radius: 5px;
       object-fit: cover;
+
+      @media all and (width <= 400px) {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

@@ -20,7 +20,13 @@ export default function Blog({ tiles, Pagetitle, title, props, galery }) {
                 ) : (
                   <p className="main-blog__date">{prop.releaseDate}</p>
                 )}
-                <Image src={prop.image.url} alt={prop.title} width="400" height="350" />
+                <Image
+                  src={prop.image.url}
+                  alt={prop.title}
+                  width="400"
+                  height="350"
+                  className="main-blog__tiles--image"
+                />
                 <h2>{prop.title}</h2>
                 <Image
                   src="/arrow.svg"
