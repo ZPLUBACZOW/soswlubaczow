@@ -4,6 +4,7 @@
 @use './main.scss' as *;
 @use './kontakt.scss' as *;
 @use './footer.scss' as *;
+@use './accessibility.scss' as *;
 
 //* General Settings
 body {
@@ -29,4 +30,32 @@ a {
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #202020;
+}
+
+//* Accessibility Class
+.large-font {
+  h1,
+  h2,
+  h3 {
+    font-size: 35px;
+  }
+  p,
+  li {
+    font-size: 20px;
+  }
+}
+.hight-contrast {
+  background-color: #202020;
+  h1,
+  h2,
+  h2,
+  p,
+  li,
+  span {
+    color: #ffff00;
+  }
+}
+.link-on a {
+  text-decoration: underline;
+  color: #a639ff;
 }
