@@ -38,17 +38,33 @@
     align-self: flex-end;
   }
   &__list {
-    width: 600px;
+    margin: auto;
+    width: min(600px, 98%);
     @include setFlex(row, flex-start);
     gap: 25px;
     transition: 0.4s scale;
 
-    &:hover {
-      scale: 1.05;
+    @media all and (width > 400px) {
+      &:hover {
+        scale: 1.05;
+      }
     }
     span {
       width: 100%;
       @include setFlex(column, center, flex-start);
+    }
+    @media all and (width <= 400px) {
+      flex-wrap: wrap;
+      text-align: center;
+
+      span p,
+      h2 {
+        margin: 10px auto;
+        width: auto;
+      }
+      img {
+        margin: auto;
+      }
     }
   }
   &__date {
@@ -82,7 +98,7 @@
   }
   &__tiles {
     margin-inline: auto;
-    width: min(400px, 100%);
+    width: min(400px, 98%);
     @media all and (width >= 400px) {
       max-height: 550px;
     }

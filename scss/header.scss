@@ -76,11 +76,12 @@
     ol {
       display: none;
       margin: 0px;
-      padding: 15px 0px;
+      padding: 20px 0px;
       position: absolute;
       left: 0;
       width: 100%;
-      gap: 8px;
+      gap: 10px;
+      border-bottom: 2px solid $black;
       background-color: $mainGreen;
       list-style: none;
       font-size: 1.2rem;
