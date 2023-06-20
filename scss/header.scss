@@ -26,7 +26,7 @@
     position: absolute;
     top: 0px;
 
-    @media all and (width <= 730px) {
+    @media all and (width <= 820px) {
       height: 260px;
       width: auto;
     }
@@ -101,7 +101,7 @@
       border-left: 50px solid transparent;
       border-right: 50px solid transparent;
       height: 0;
-      width: min(100%, 1100px);
+      width: min(100%, 1150px);
     }
     ul {
       padding: 0px;
@@ -145,7 +145,7 @@
       }
     }
   }
-  @media all and (width <= 730px) {
+  @media all and (width <= 820px) {
     &__nav {
       ul {
         display: none;

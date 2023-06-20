@@ -97,8 +97,8 @@ export default function Header() {
               <Link href="/">
                 <li>Nasze pasje</li>
               </Link>
-              <Link href="/galeria">
-                <li>Galeria</li>
+              <Link href="/">
+                <li>Oferta edukacjna</li>
               </Link>
               <Link href="/">
                 <li>Dla rodziców</li>
@@ -125,8 +125,8 @@ export default function Header() {
             <Link href="/">
               <li>Nasze pasje</li>
             </Link>
-            <Link href="/galeria">
-              <li>Galeria</li>
+            <Link href="/">
+              <li>Oferta edukacjna</li>
             </Link>
             <Link href="/">
               <li>Dla rodziców</li>
