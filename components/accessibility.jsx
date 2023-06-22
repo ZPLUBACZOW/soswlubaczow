@@ -6,7 +6,9 @@ export default function Accessibility() {
 
   return (
     <section
-      className={`accessibility ${isOn ? 'accessibility--on' : 'accessibility--off'}`}
+      className={`accessibility ${
+        isOn ? 'accessibility--on' : 'accessibility--off'
+      }`}
     >
       <Image
         src="/accessibility.svg"
@@ -14,7 +16,9 @@ export default function Accessibility() {
         width="50"
         height="50"
         onClick={() => setIsOn(!isOn)}
-        className={`accessibility__image ${isOn ? 'accessibility__image--max' : ''}`}
+        className={`accessibility__image ${
+          isOn ? 'accessibility__image--max' : ''
+        }`}
       />
 
       <ul className="accessibility__menu">
@@ -29,7 +33,11 @@ export default function Accessibility() {
         </li>
         <li
           onClick={() =>
-            document.body.classList.remove('large-font', 'hight-contrast', 'link-on')
+            document.body.classList.remove(
+              'large-font',
+              'hight-contrast',
+              'link-on'
+            )
           }
         >
           Reset

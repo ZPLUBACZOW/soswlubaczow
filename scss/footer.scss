@@ -25,6 +25,7 @@
   &__title {
     width: 100%;
     font-size: 1.7rem;
+    text-align: center;
   }
   &__text {
     @include setFlex(row);

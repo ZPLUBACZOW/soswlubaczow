@@ -6,13 +6,18 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer--container">
         <div className="footer__description">
-          <h1 className="footer__title">MŁODZIEŻOWY ORŚRODEK WYCHOWAWCZY W LUBACZOWIE</h1>
+          <h1 className="footer__title">
+            SPECJALNY ORŚRODEK SZKOLNO-WYCHOWAWCZY <br /> W LUBACZOWIE
+          </h1>
 
           <div className="footer__text">
             <p>tel/fax.: (16) 632 10 88</p>
             <p>E-mail: sekretariat@zplubaczow.com</p>
             <p>
-              <Link href="https://goo.gl/maps/6hV9FaHmb46H7WXx9" target="_balnk">
+              <Link
+                href="https://goo.gl/maps/6hV9FaHmb46H7WXx9"
+                target="_balnk"
+              >
                 Adres: Tadeusza Kościuszki 145
               </Link>
             </p>
@@ -31,7 +36,12 @@ export default function Footer() {
           </h4>
         </div>
 
-        <Image src="/footer-image.png" alt="Jan Paweł II" width="320" height="200" />
+        <Image
+          src="/footer-image.png"
+          alt="Jan Paweł II"
+          width="320"
+          height="200"
+        />
       </div>
     </footer>
   )

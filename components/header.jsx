@@ -9,7 +9,8 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentPosition = window.pageYOffset || document.documentElement.scrollTop
+      const currentPosition =
+        window.pageYOffset || document.documentElement.scrollTop
 
       setScrollPosition(currentPosition)
 
@@ -31,7 +32,7 @@ export default function Header() {
       <header className="header">
         <div className="header__container">
           <Image
-            src="/header-image.svg"
+            src="/header-image-left.svg"
             alt="mozaika"
             width="140"
             height="140"
@@ -43,8 +44,8 @@ export default function Header() {
               <Image
                 src="/Logo.svg"
                 alt=""
-                width="100"
-                height="100"
+                width="50"
+                height="50"
                 className="header__logo"
               />
             </Link>
@@ -52,12 +53,12 @@ export default function Header() {
             <h1>
               <span>zespół placówek im. Jana Pawła II</span>
               <br />
-              MŁODZIEŻOWY ORŚRODEK <br /> WYCHOWAWCZY W LUBACZOWIE
+              SPECJALNY ORŚRODEK <br /> SZKOLNO-WYCHOWAWCZY W LUBACZOWIE
             </h1>
           </div>
 
           <Image
-            src="/header-image.svg"
+            src="/header-image-right.svg"
             alt="mazaika"
             width="140"
             height="140"
