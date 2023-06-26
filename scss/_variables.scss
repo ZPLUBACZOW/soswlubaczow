@@ -1,18 +1,9 @@
 //* Color variables
 $white: #fff;
 $black: #000;
-$mainGradient: linear-gradient(
-  90deg,
-  #b384e1,
-  #a878d6,
-  #9c6ccb,
-  #9160c0,
-  #8554b5,
-  #7a48aa,
-  #6e3c9f
-);
-$mainGreen: #6e3c9f;
-$secondGreen: #b384e1;
+$mainGradient: linear-gradient(90deg, #3e3c9f, #271ab6);
+$mainGreen: #271ab6;
+$secondGreen: #3e3c9f;
 $textColor: #1e1e1e;
 $otherText: #8a8a8a;
 

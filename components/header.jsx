@@ -31,14 +31,6 @@ export default function Header() {
     <>
       <header className="header">
         <div className="header__container">
-          <Image
-            src="/header-image-left.svg"
-            alt="mozaika"
-            width="140"
-            height="140"
-            className="header__left"
-          />
-
           <div className="header__center">
             <Link href="/">
               <Image
@@ -56,14 +48,6 @@ export default function Header() {
               SPECJALNY ORŚRODEK <br /> SZKOLNO-WYCHOWAWCZY W LUBACZOWIE
             </h1>
           </div>
-
-          <Image
-            src="/header-image-right.svg"
-            alt="mazaika"
-            width="140"
-            height="140"
-            className="header__right"
-          />
         </div>
 
         <div className={isScrolled ? 'holder' : ''}></div>
