@@ -1,0 +1,103 @@
+@use './variables' as *;
+
+//* Oferta Edukacjna Page
+.main-oferta-edukacjna {
+  margin: auto;
+  width: min(1580px, 98%);
+  @include setFlex(row, space-between);
+  flex-wrap: wrap;
+
+  &__title {
+    margin-top: 55px;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 2.8rem;
+    color: $textColor;
+
+    @media all and (width <= 550px) {
+      font-size: 2.2rem;
+    }
+  }
+  &__prymary {
+    @include setFlex(column);
+    gap: 20px;
+  }
+  &__prymary--title,
+  &__secondary--title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: $textColor;
+
+    @media all and (width > 1270px) {
+      align-self: flex-start;
+    }
+    @media all and (width <= 550px) {
+      font-size: 1.5rem;
+    }
+  }
+  &__galery {
+    @include setFlex(row);
+    gap: 20px;
+    flex-wrap: wrap;
+
+    @media all and (width <= 420px) {
+      width: 98%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &--mini {
+      @include setFlex(column);
+      gap: 20px;
+
+      @media all and (width <= 653px) {
+        flex-direction: row;
+      }
+      @media all and (width <= 420px) {
+        width: 98%;
+        gap: 2%;
+
+        img {
+          width: 50%;
+          height: auto;
+        }
+      }
+    }
+  }
+  &__secondary {
+    @include setFlex(column);
+    gap: 20px;
+  }
+  &__article {
+    max-width: 800px;
+    @include setFlex(row);
+    gap: 20px;
+    transition: 0.4s scale;
+
+    @media all and (width >= 550px) {
+      &:hover {
+        scale: 1.02;
+      }
+    }
+    @media all and (width <= 1480px) {
+      max-width: 600px;
+    }
+    @media all and (width <= 610px) {
+      width: min(400px, 98%);
+      flex-wrap: wrap-reverse;
+
+      img {
+        width: min(400px, 100%);
+        height: auto;
+      }
+    }
+  }
+
+  @media all and (width <= 1270px) {
+    justify-content: center;
+    gap: 20px;
+  }
+}

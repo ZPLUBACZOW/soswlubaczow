@@ -14,8 +14,8 @@ export default function Home() {
           className="main-kontakt__image"
         />
         <h3>
-          ZESPÓŁ PLACÓWEK IM. JANA PAWŁA II W LUBACZOWIE <br /> Młodzieżowy Ośrodek
-          Wychowawczy
+          ZESPÓŁ PLACÓWEK IM. JANA PAWŁA II W LUBACZOWIE <br /> Specjalny
+          Ośrodek Szkolno-Wychowawczy
         </h3>
 
         <h3>ul. Kościuszki 145, 37-600 Lubaczów</h3>
@@ -33,36 +33,20 @@ export default function Home() {
 
       <div className="main-kontakt__description">
         <h3>
-          <span>tel/fax: (16) 632 10 88</span> - mgr Małgorzata Jachyra - Mazepa Dyrektor{' '}
-          <br />
+          <span>tel/fax: (16) 632 10 88</span> - mgr Małgorzata Jachyra-Mazepa
+          Dyrektor <br />
           Zespołu Placówek im Jana Pawła II w Lubaczowie
         </h3>
         <h3>
-          <span>tel/fax: (16) 632 82 95</span> - mgr Dariusz Cencora Wicedyrektor d/s{' '}
-          <br />
-          dydaktycznych Młodzieżowego Ośrodka Wychowawczego
+          <span>tel/fax: (16) 632 82 99</span> - mgr Renata Sieradzka-Koperczak
+          Wicedyrektor d/s <br />
+          dydaktycznych Specjalnego Ośrodka Szkolno-Wychowawczego w Lubaczowie
         </h3>
         <h3>
-          <span>tel/fax: (16) 632 15 31</span> - mgr Danuta Butyńska Wicedyrektor d/s{' '}
-          <br />
-          wychowawczych Młodzieżowego Ośrodka Wychowawczego
+          <span>tel/fax: (16) 632 82 82</span> - mgr Agata Gardzielik-Misztal
+          Wicedyrektor d/s <br />
+          wychowawczych Specjalnego Ośrodka Szkolno-Wychowawczego w Lubaczowie
         </h3>
-        <h3>
-          <span>tel/fax: (16) 632 15 48</span> - Automat telefoniczny i pokój wychowawców{' '}
-          <br /> w Internacie MOW
-        </h3>
-        <h3>
-          Kontakt do Młodzieżowego Ośrodka Wychowawczego: <br /> w godzinach
-          <span> 8:00-15:00 - 16 632 10 88</span> <br />w godzinach
-          <span> 15:00-8:00 - 699 671 869</span>
-        </h3>
-        <h4>
-          Telefony kontaktowe do grup: <br />
-          gr. I - 699 671 870 <br />
-          gr. II - 699 671 871 <br />
-          gr. III - 699 671 872 <br />
-          gr. adaptacyjna - 699 671 873
-        </h4>
       </div>
 
       <hr className="main-kontakt__border" />

@@ -36,8 +36,8 @@ export default function Header() {
               <Image
                 src="/Logo.svg"
                 alt=""
-                width="50"
-                height="50"
+                width="100"
+                height="100"
                 className="header__logo"
               />
             </Link>
@@ -45,7 +45,7 @@ export default function Header() {
             <h1>
               <span>zespół placówek im. Jana Pawła II</span>
               <br />
-              SPECJALNY ORŚRODEK <br /> SZKOLNO-WYCHOWAWCZY W LUBACZOWIE
+              SPECJALISTYCZNY OŚRODEK <br /> SZKOLNO-WYCHOWAWCZY W LUBACZOWIE
             </h1>
           </div>
         </div>
@@ -82,10 +82,10 @@ export default function Header() {
               <Link href="/">
                 <li>Nasze pasje</li>
               </Link>
-              <Link href="/">
+              <Link href="/oferta-edukacjna">
                 <li>Oferta edukacjna</li>
               </Link>
-              <Link href="/">
+              <Link href="/dla-rodzicow">
                 <li>Dla rodziców</li>
               </Link>
               <Link href="/dokumenty">
@@ -110,10 +110,10 @@ export default function Header() {
             <Link href="/">
               <li>Nasze pasje</li>
             </Link>
-            <Link href="/">
+            <Link href="/oferta-edukacjna">
               <li>Oferta edukacjna</li>
             </Link>
-            <Link href="/">
+            <Link href="/dla-rodzicow">
               <li>Dla rodziców</li>
             </Link>
             <Link href="/dokumenty">

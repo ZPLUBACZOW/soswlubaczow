@@ -1,0 +1,64 @@
+@use './variables' as *;
+
+//* Post Page
+.main-post {
+  margin: auto;
+  margin-top: 60px;
+  width: min(740px, 98%);
+  @include setFlex(column, flex-start, flex-start);
+
+  &__main-image {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+  }
+  &__date {
+    color: $secondGreen;
+    font-weight: bold;
+    font-size: 1.2rem;
+    @include setFlex(row);
+    gap: 5px;
+
+    &::before {
+      display: block;
+      height: 22px;
+      content: url(/calendar.png);
+    }
+  }
+  &__title {
+    margin: 0px;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: $textColor;
+  }
+  &__border {
+    width: 100%;
+    border: 1px solid $secondGreen;
+  }
+  &__content {
+    h2 {
+      margin: 10px 0px;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+  }
+  &__return {
+    font-size: 1.1rem;
+    font-weight: 500;
+    align-self: flex-end;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &__galery {
+    margin-top: 40px;
+    width: 100%;
+    @include setGrid(3, 10px);
+
+    img {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+    }
+  }
+}
