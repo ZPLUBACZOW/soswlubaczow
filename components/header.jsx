@@ -11,13 +11,22 @@ export default function Header() {
     const handleScroll = () => {
       const currentPosition =
         window.pageYOffset || document.documentElement.scrollTop
+      const pageWidth = screen.width
 
       setScrollPosition(currentPosition)
 
-      if (currentPosition >= 140) {
-        setIsScrolled(true)
+      if (pageWidth > 820) {
+        if (currentPosition >= 140) {
+          setIsScrolled(true)
+        } else {
+          setIsScrolled(false)
+        }
       } else {
-        setIsScrolled(false)
+        if (currentPosition >= 255) {
+          setIsScrolled(true)
+        } else {
+          setIsScrolled(false)
+        }
       }
     }
 
@@ -79,7 +88,7 @@ export default function Header() {
               <Link href="/ogloszenia">
                 <li>Ogłoszenia</li>
               </Link>
-              <Link href="/">
+              <Link href="/nasze-pasje">
                 <li>Nasze pasje</li>
               </Link>
               <Link href="/oferta-edukacjna">
@@ -107,7 +116,7 @@ export default function Header() {
             <Link href="/ogloszenia">
               <li>Ogłoszenia</li>
             </Link>
-            <Link href="/">
+            <Link href="/nasze-pasje">
               <li>Nasze pasje</li>
             </Link>
             <Link href="/oferta-edukacjna">

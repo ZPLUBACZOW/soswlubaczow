@@ -10,12 +10,12 @@ export const Layout = ({ children, title, styleName }) => {
   return (
     <>
       <Head>
-        <title>{`${title} | Młodzieżowy Ośrodek Wychowawczy w Lubaczowie`}</title>
-        <meta name="description" content="description" />
+        <title>{`${title} | Specjalistyczny Ośrodek Szkolno-Wychowawczy w Lubaczowie`}</title>
+        <meta name="description" content="opis" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <div className={inter.className}>
+      <div className={`${inter.className} backgraund`}>
         <Header />
         <Accessibility />
         <main className={`main-${styleName}`}>{children}</main>

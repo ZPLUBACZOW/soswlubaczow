@@ -2,7 +2,7 @@ import Blog from '@/template/blog'
 import client from '@/lib/apollo-client'
 import { gql } from '@apollo/client'
 
-export default function dlaRodzicow({ hypers }) {
+export default function dlaRodzicow({ forParents }) {
   const svg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@ export default function dlaRodzicow({ hypers }) {
       title="Dla Rodziców"
       titleSpan="Potrzebne informacje i dokumenty!"
       icon={svg}
-      props={hypers}
+      props={forParents}
     />
   )
 }
@@ -28,24 +28,20 @@ export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query {
-        hypers(first: 1000, orderBy: releaseDate_DESC) {
+        forParents(first: 1000) {
           title
-          releaseDate
-          image {
+          description
+          file {
             url
           }
-          description {
-            raw
-          }
-          slug
         }
       }
     `,
   })
-  const { hypers } = data
+  const { forParents } = data
   return {
     props: {
-      hypers,
+      forParents,
     },
   }
 }

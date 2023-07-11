@@ -2,7 +2,7 @@ import { Layout } from './layout'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function Blog({ tiles, title, titleSpan, icon, props }) {
+export default function Blog({ news, tiles, title, titleSpan, icon, props }) {
   return (
     <Layout title={title} styleName="blog">
       <section className="main-blog__header">
@@ -16,36 +16,40 @@ export default function Blog({ tiles, title, titleSpan, icon, props }) {
 
       {tiles && (
         <section className="main-blog__container">
-          {props.map((prop, i) => (
-            <Link href={prop.slug} key={i}>
-              <div key={i} className="main-blog__tiles">
-                <p className="main-blog__date">{prop.releaseDate}</p>
+          {props.map(
+            (prop, i) =>
+              prop.category === (news ? 'Aktualnosci' : 'Ogloszenia') &&
+              !prop.hidden && (
+                <Link href={prop.slug} key={i}>
+                  <div key={i} className="main-blog__tiles">
+                    <p className="main-blog__date">{prop.date}</p>
 
-                <Image
-                  src={prop.image.url}
-                  alt={prop.title}
-                  width="400"
-                  height="350"
-                  className="main-blog__tiles--image"
-                />
-                <h2>{prop.title}</h2>
-                <Image
-                  src="/arrow.svg"
-                  alt="arrow"
-                  width="20"
-                  height="20"
-                  className="main-blog__arrow"
-                />
-              </div>
-            </Link>
-          ))}
+                    <Image
+                      src={prop.mainImage.url}
+                      alt={prop.title}
+                      width="400"
+                      height="350"
+                      className="main-blog__tiles--image"
+                    />
+                    <h2>{prop.title}</h2>
+                    <Image
+                      src="/arrow.svg"
+                      alt="arrow"
+                      width="20"
+                      height="20"
+                      className="main-blog__arrow"
+                    />
+                  </div>
+                </Link>
+              )
+          )}
         </section>
       )}
 
       {!tiles && (
         <section className="main-blog__container--list">
           {props.map((prop, i) => (
-            <Link href={prop.slug} key={i}>
+            <Link href={prop.file.url} key={i}>
               <div key={i} className="main-blog__list">
                 <svg
                   width="150"
@@ -64,7 +68,7 @@ export default function Blog({ tiles, title, titleSpan, icon, props }) {
 
                 <span>
                   <h2>{prop.title}</h2>
-                  <p>{prop.title}</p>
+                  <p>{prop.description}</p>
                   <Image
                     src="/arrow.svg"
                     alt="arrow"

@@ -7,6 +7,7 @@
 @use './accessibility.scss' as *;
 @use './oferta-edukacjna.scss' as *;
 @use './post.scss' as *;
+@use './pasje.scss' as *;
 
 //* General Settings
 body {
@@ -21,6 +22,11 @@ a {
 *::after,
 *::before {
   box-sizing: border-box;
+}
+
+//* Backgraund in Layout
+.backgraund {
+  background-color: $white;
 }
 
 //* Scrollbar

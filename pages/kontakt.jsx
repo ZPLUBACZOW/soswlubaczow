@@ -1,4 +1,4 @@
-import { Layout } from '@/components/layout'
+import { Layout } from '@/template/layout'
 import Image from 'next/image'
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
           className="main-kontakt__image"
         />
         <h3>
-          ZESPÓŁ PLACÓWEK IM. JANA PAWŁA II W LUBACZOWIE <br /> Specjalny
+          ZESPÓŁ PLACÓWEK IM. JANA PAWŁA II W LUBACZOWIE <br /> Specjalistyczny
           Ośrodek Szkolno-Wychowawczy
         </h3>
 
@@ -34,8 +34,7 @@ export default function Home() {
       <div className="main-kontakt__description">
         <h3>
           <span>tel/fax: (16) 632 10 88</span> - mgr Małgorzata Jachyra-Mazepa
-          Dyrektor <br />
-          Zespołu Placówek im Jana Pawła II w Lubaczowie
+          Dyrektor <br /> Zespołu Placówek im Jana Pawła II w Lubaczowie
         </h3>
         <h3>
           <span>tel/fax: (16) 632 82 99</span> - mgr Renata Sieradzka-Koperczak
@@ -44,7 +43,8 @@ export default function Home() {
         </h3>
         <h3>
           <span>tel/fax: (16) 632 82 82</span> - mgr Agata Gardzielik-Misztal
-          Wicedyrektor d/s <br />
+          Wicedyrektor d/s
+          <br />
           wychowawczych Specjalnego Ośrodka Szkolno-Wychowawczego w Lubaczowie
         </h3>
       </div>
@@ -59,11 +59,18 @@ export default function Home() {
           height="137"
           className="main-kontakt__image"
         />
-        <h2>Sekretariat</h2>
         <h1>
           Sekretariat - <span>sekretariat@zplubaczow.com</span> <br />
-          Sekretariat MOW - <span>sekretariatmow@zplubaczow.com</span> <br />
-          Sekretariat Zespołu czynny od <span>Pn - Pt w godz. 7.00-15.00</span>
+          Pedagog - <span>j.misztal@zplubaczow.com</span> <br />
+          Psycholog:
+          <br />
+          <span>
+            a.zielinska@zplubaczow.com <br />
+            e.wisniewska-jaracz@zplubaczow.com
+          </span>
+          <br />
+          Nr konta: <br />
+          <span>30910100032001000620110001</span>
         </h1>
       </div>
     </Layout>

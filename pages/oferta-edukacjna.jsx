@@ -1,6 +1,7 @@
 import { Layout } from '@/template/layout'
 import Image from 'next/image'
 import CustomImage from '@/components/custom-image'
+import Link from 'next/link'
 
 export default function OfretaEdukacjna() {
   return (
@@ -26,33 +27,37 @@ export default function OfretaEdukacjna() {
           Szkoła branżowa I stopnia na kierunkach:
         </h2>
 
-        <article className="main-oferta-edukacjna__article">
-          <span>
-            <h3>Murarz – tynkarz | symbol 711204 - B.18</h3>
-            <p>
-              trzyletni cykl kształcenia, zakończony jest egzaminem państwowym,
-              prowadzonym pod nadzorem Okręgowej Komisji Egzaminacyjnej, który uprawnia do
-              legalnej pracy w każdym kraju U.E. na stanowisku robotnika
-              wykwalifikowanego.
-            </p>
-          </span>
+        <Link href="/murarz-tynkarz">
+          <article className="main-oferta-edukacjna__article">
+            <span>
+              <h3>Murarz – tynkarz | symbol 711204 - B.18</h3>
+              <p>
+                trzyletni cykl kształcenia, zakończony jest egzaminem państwowym,
+                prowadzonym pod nadzorem Okręgowej Komisji Egzaminacyjnej, który uprawnia
+                do legalnej pracy w każdym kraju U.E. na stanowisku robotnika
+                wykwalifikowanego.
+              </p>
+            </span>
 
-          <Image src="/placeholder.svg" alt="" width="200" height="200" />
-        </article>
+            <Image src="/placeholder.svg" alt="" width="200" height="200" />
+          </article>
+        </Link>
 
-        <article className="main-oferta-edukacjna__article">
-          <span>
-            <h3>Kucharz | symbol 512001</h3>
-            <p>
-              trzyletni cykl kształcenia, zakończony egzaminem zawodowym zdawanym przed
-              Okręgową Komisją Egzaminacyjną. Zdany egzamin zawodowy daje kwalifikacje do
-              pracy na stanowisku kucharza w placówkach gastronomicznych na terenie Polski
-              i krajów U.E.
-            </p>
-          </span>
+        <Link href="/kucharz">
+          <article className="main-oferta-edukacjna__article">
+            <span>
+              <h3>Kucharz | symbol 512001</h3>
+              <p>
+                trzyletni cykl kształcenia, zakończony egzaminem zawodowym zdawanym przed
+                Okręgową Komisją Egzaminacyjną. Zdany egzamin zawodowy daje kwalifikacje
+                do pracy na stanowisku kucharza w placówkach gastronomicznych na terenie
+                Polski i krajów U.E.
+              </p>
+            </span>
 
-          <Image src="/placeholder.svg" alt="" width="200" height="200" />
-        </article>
+            <Image src="/placeholder.svg" alt="" width="200" height="200" />
+          </article>
+        </Link>
       </section>
     </Layout>
   )

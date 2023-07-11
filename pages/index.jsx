@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <Layout title="Strona Główna" styleName="page">
       <h1 className="main-page__title">
-        O MŁODZIEŻOWYM OŚRODKU WYCHOWAWCZYM W <span>LUBACZOWIE</span>
+        o młodzieżowym ośrodku wychowawczym w <span>lubaczowie</span>
       </h1>
 
       <div className="main-page__content">

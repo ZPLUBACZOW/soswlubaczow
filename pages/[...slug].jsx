@@ -4,27 +4,27 @@ import { gql } from '@apollo/client'
 import { useRouter } from 'next/router'
 import CustomImage from '@/components/custom-image'
 
-export default function Post({ movie }) {
-  const { title, releaseDate, image, description, images } = movie
+export default function Post({ post }) {
+  const { title, date, mainImage, content, files, images } = post
   const router = useRouter()
 
   return (
     <Layout title={title} styleName="post">
       <CustomImage
-        src={image.url}
+        src={mainImage.url}
         alt={title}
         width="740"
         height="550"
         className="main-post__main-image"
       />
 
-      <p className="main-post__date">{releaseDate}</p>
+      <p className="main-post__date">{date}</p>
       <h1 className="main-post__title">{title}</h1>
       <hr className="main-post__border" />
 
       <article
         className="main-post__content"
-        dangerouslySetInnerHTML={{ __html: description.html }}
+        dangerouslySetInnerHTML={{ __html: content.html }}
       />
 
       <p className="main-post__return" onClick={() => router.back()}>
@@ -36,7 +36,14 @@ export default function Post({ movie }) {
           <hr className="main-post__border" />
           <section className="main-post__galery">
             {images.map((image, i) => (
-              <CustomImage key={i} src={image.url} alt={title} width="400" height="400" />
+              <CustomImage
+                key={i}
+                src={image.url}
+                alt={title}
+                width="500"
+                height="500"
+                className="main-post__galery--image"
+              />
             ))}
           </section>
 
@@ -54,17 +61,20 @@ export async function getStaticProps({ params }) {
 
   const { data } = await client.query({
     query: gql`
-      query movieBySlug($slug: String!) {
-        hypers(where: { slug: $slug }) {
+      query postBySlug($slug: String!) {
+        posts(where: { slug: $slug }) {
           title
-          releaseDate
-          image {
+          slug
+          date
+          mainImage {
             url
           }
-          description {
+          content {
             html
           }
-          slug
+          files {
+            url
+          }
           images {
             url
           }
@@ -73,25 +83,25 @@ export async function getStaticProps({ params }) {
     `,
     variables: { slug },
   })
-  const { hypers } = data
-  const movie = hypers[0]
+  const { posts } = data
+  const post = posts[0]
 
-  return { props: { movie: movie } }
+  return { props: { post: post } }
 }
 
 export async function getStaticPaths() {
   const { data } = await client.query({
     query: gql`
       query {
-        hypers {
+        posts {
           slug
         }
       }
     `,
   })
-  const { hypers } = data
-  const paths = hypers.map((movie) => ({
-    params: { slug: [movie.slug] },
+  const { posts } = data
+  const paths = posts.map((post) => ({
+    params: { slug: [post.slug] },
   }))
 
   return { paths, fallback: false }

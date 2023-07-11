@@ -2,7 +2,7 @@ import Blog from '@/template/blog'
 import client from '@/lib/apollo-client'
 import { gql } from '@apollo/client'
 
-export default function Documents({ hypers }) {
+export default function Documents({ documents }) {
   const svg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,12 @@ export default function Documents({ hypers }) {
   )
 
   return (
-    <Blog title="Dokumenty" titleSpan="Potrzebne dokumenty!" icon={svg} props={hypers} />
+    <Blog
+      title="Dokumenty"
+      titleSpan="Potrzebne dokumenty!"
+      icon={svg}
+      props={documents}
+    />
   )
 }
 
@@ -28,24 +33,20 @@ export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query {
-        hypers(first: 1000, orderBy: releaseDate_DESC) {
+        documents(first: 1000) {
           title
-          releaseDate
-          image {
+          description
+          file {
             url
           }
-          description {
-            raw
-          }
-          slug
         }
       }
     `,
   })
-  const { hypers } = data
+  const { documents } = data
   return {
     props: {
-      hypers,
+      documents,
     },
   }
 }

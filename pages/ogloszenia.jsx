@@ -2,7 +2,7 @@ import Blog from '@/template/blog'
 import client from '@/lib/apollo-client'
 import { gql } from '@apollo/client'
 
-export default function Ogloszenia({ hypers }) {
+export default function Ogloszenia({ posts }) {
   const svg = (
     <svg
       fill="#000000"
@@ -46,7 +46,7 @@ export default function Ogloszenia({ hypers }) {
       title="Ogłoszenia"
       titleSpan="Ogłoszenia z naszej placówki!!"
       icon={svg}
-      props={hypers}
+      props={posts}
     />
   )
 }
@@ -55,24 +55,23 @@ export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query {
-        hypers(first: 1000, orderBy: releaseDate_DESC) {
+        posts(first: 1000, orderBy: date_DESC) {
           title
-          releaseDate
-          image {
+          slug
+          category
+          date
+          mainImage {
             url
           }
-          description {
-            raw
-          }
-          slug
+          hidden
         }
       }
     `,
   })
-  const { hypers } = data
+  const { posts } = data
   return {
     props: {
-      hypers,
+      posts,
     },
   }
 }

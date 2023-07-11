@@ -2,7 +2,7 @@ import Blog from '@/template/blog'
 import client from '@/lib/apollo-client'
 import { gql } from '@apollo/client'
 
-export default function Aktualnosci({ hypers }) {
+export default function Aktualnosci({ posts }) {
   const svg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,11 +16,12 @@ export default function Aktualnosci({ hypers }) {
 
   return (
     <Blog
+      news={true}
       tiles={true}
       title="Aktualności"
       titleSpan="Najnowsze wiadomości!!"
       icon={svg}
-      props={hypers}
+      props={posts}
     />
   )
 }
@@ -29,24 +30,23 @@ export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query {
-        hypers(first: 1000, orderBy: releaseDate_DESC) {
+        posts(first: 1000, orderBy: date_DESC) {
           title
-          releaseDate
-          image {
+          slug
+          category
+          date
+          mainImage {
             url
           }
-          description {
-            raw
-          }
-          slug
+          hidden
         }
       }
     `,
   })
-  const { hypers } = data
+  const { posts } = data
   return {
     props: {
-      hypers,
+      posts,
     },
   }
 }
