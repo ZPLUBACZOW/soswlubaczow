@@ -7,7 +7,7 @@
   @include setFlex(column);
 
   &__border {
-    border: solid 2px #49d380;
+    border: solid 2px $mainGreen;
     width: 80%;
     margin: 35px 0px;
   }
@@ -36,6 +36,7 @@
   &__image {
     object-fit: cover;
     border-radius: 20px;
+    width: auto;
   }
 
   @media all and (width <= 925px) {

@@ -20,21 +20,21 @@ export default function Home() {
 
       <div className="main-pasje__content">
         <Image
-          src="/ceramika1.png"
+          src="/nasze-pasje/ceramika1.png"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/ceramika2.png"
+          src="/nasze-pasje/ceramika2.png"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/ceramika3.png"
+          src="/nasze-pasje/ceramika3.png"
           alt="image"
           width="300"
           height="250"
@@ -59,21 +59,21 @@ export default function Home() {
 
       <div className="main-pasje__content">
         <Image
-          src="/ceramika1.png"
+          src="/nasze-pasje/papieroplastyka1.png"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/ceramika2.png"
+          src="/nasze-pasje/papieroplastyka2.png"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/ceramika3.png"
+          src="/nasze-pasje/papieroplastyka3.png"
           alt="image"
           width="300"
           height="250"
@@ -98,21 +98,21 @@ export default function Home() {
 
       <div className="main-pasje__content">
         <Image
-          src="/ceramika1.png"
+          src="/nasze-pasje/technika1.png"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/ceramika2.png"
+          src="/nasze-pasje/technika2.png"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/ceramika3.png"
+          src="/nasze-pasje/technika3.png"
           alt="image"
           width="300"
           height="250"
@@ -137,21 +137,21 @@ export default function Home() {
 
       <div className="main-pasje__content">
         <Image
-          src="/ceramika1.png"
+          src="/nasze-pasje/teatr1.png"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/ceramika2.png"
+          src="/nasze-pasje/teatr2.png"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/ceramika3.png"
+          src="/nasze-pasje/teatr3.png"
           alt="image"
           width="300"
           height="250"
@@ -174,21 +174,21 @@ export default function Home() {
 
       <div className="main-pasje__content">
         <Image
-          src="/ceramika1.png"
+          src="/nasze-pasje/turystyka1.png"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/ceramika2.png"
+          src="/nasze-pasje/turystyka2.png"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/ceramika3.png"
+          src="/nasze-pasje/turystyka3.png"
           alt="image"
           width="300"
           height="250"
@@ -213,21 +213,21 @@ export default function Home() {
 
       <div className="main-pasje__content">
         <Image
-          src="/ceramika1.png"
+          src="/nasze-pasje/sport1.png"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/ceramika2.png"
+          src="/nasze-pasje/sport2.png"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/ceramika3.png"
+          src="/nasze-pasje/sport3.png"
           alt="image"
           width="300"
           height="250"
@@ -252,21 +252,21 @@ export default function Home() {
 
       <div className="main-pasje__content">
         <Image
-          src="/ceramika1.png"
+          src="/nasze-pasje/fotografia1.png"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/ceramika2.png"
+          src="/nasze-pasje/fotografia2.png"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/ceramika3.png"
+          src="/nasze-pasje/fotografia3.png"
           alt="image"
           width="300"
           height="250"
@@ -291,21 +291,21 @@ export default function Home() {
 
       <div className="main-pasje__content">
         <Image
-          src="/ceramika1.png"
+          src="/nasze-pasje/kulinaria1.png"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/ceramika2.png"
+          src="/nasze-pasje/kulinaria2.png"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/ceramika3.png"
+          src="/nasze-pasje/kulinaria3.png"
           alt="image"
           width="300"
           height="250"
