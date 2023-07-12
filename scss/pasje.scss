@@ -41,17 +41,29 @@
 
   @media all and (width <= 925px) {
     &__content {
-      padding-bottom: 20px;
+      padding-bottom: 10px;
       overflow-x: scroll;
+      justify-content: flex-start;
+      gap: 40px;
+    }
+    &__border {
+      width: 95%;
+    }
+    &__subtitle {
+      font-size: 2rem;
     }
     &__description,
     &__title {
       font-size: 2rem;
       flex-wrap: wrap;
+      justify-content: center;
     }
   }
   @media all and (width <= 265px) {
     &__title {
+      font-size: 1.5rem;
+    }
+    &__subtitle {
       font-size: 1.5rem;
     }
   }

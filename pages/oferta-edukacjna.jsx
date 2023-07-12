@@ -16,8 +16,18 @@ export default function OfretaEdukacjna() {
           <CustomImage src="/placeholder.svg" alt="" width="420" height="420" />
 
           <div className="main-oferta-edukacjna__galery--mini">
-            <CustomImage src="/placeholder.svg" alt="" width="200" height="200" />
-            <CustomImage src="/placeholder.svg" alt="" width="200" height="200" />
+            <CustomImage
+              src="/placeholder.svg"
+              alt=""
+              width="200"
+              height="200"
+            />
+            <CustomImage
+              src="/placeholder.svg"
+              alt=""
+              width="200"
+              height="200"
+            />
           </div>
         </div>
       </section>
@@ -30,32 +40,32 @@ export default function OfretaEdukacjna() {
         <Link href="/murarz-tynkarz">
           <article className="main-oferta-edukacjna__article">
             <span>
-              <h3>Murarz – tynkarz | symbol 711204 - B.18</h3>
+              <h3>Murarz – tynkarz</h3>
               <p>
-                trzyletni cykl kształcenia, zakończony jest egzaminem państwowym,
-                prowadzonym pod nadzorem Okręgowej Komisji Egzaminacyjnej, który uprawnia
-                do legalnej pracy w każdym kraju U.E. na stanowisku robotnika
-                wykwalifikowanego.
+                trzyletni cykl kształcenia, zakończony jest egzaminem
+                państwowym, prowadzonym pod nadzorem Okręgowej Komisji
+                Egzaminacyjnej, który uprawnia do legalnej pracy w każdym kraju
+                U.E. na stanowisku robotnika wykwalifikowanego.
               </p>
             </span>
 
-            <Image src="/placeholder.svg" alt="" width="200" height="200" />
+            <Image src="/murarz.webp" alt="murarz" width="200" height="200" />
           </article>
         </Link>
 
         <Link href="/kucharz">
           <article className="main-oferta-edukacjna__article">
             <span>
-              <h3>Kucharz | symbol 512001</h3>
+              <h3>Kucharz</h3>
               <p>
-                trzyletni cykl kształcenia, zakończony egzaminem zawodowym zdawanym przed
-                Okręgową Komisją Egzaminacyjną. Zdany egzamin zawodowy daje kwalifikacje
-                do pracy na stanowisku kucharza w placówkach gastronomicznych na terenie
-                Polski i krajów U.E.
+                trzyletni cykl kształcenia, zakończony egzaminem zawodowym
+                zdawanym przed Okręgową Komisją Egzaminacyjną. Zdany egzamin
+                zawodowy daje kwalifikacje do pracy na stanowisku kucharza w
+                placówkach gastronomicznych na terenie Polski i krajów U.E.
               </p>
             </span>
 
-            <Image src="/placeholder.svg" alt="" width="200" height="200" />
+            <Image src="/kucharz.webp" alt="kucharz" width="200" height="200" />
           </article>
         </Link>
       </section>
