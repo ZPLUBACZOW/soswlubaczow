@@ -63,7 +63,6 @@ a {
   }
 }
 .hight-contrast {
-  background-color: #202020;
   h1,
   h2,
   h2,
@@ -71,6 +70,12 @@ a {
   li,
   span {
     color: #ffff00;
+  }
+  .backgraund {
+    background-color: #202020;
+  }
+  .main-blog__header--icon {
+    filter: invert(100);
   }
 }
 .link-on a,

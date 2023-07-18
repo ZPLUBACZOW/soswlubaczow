@@ -77,6 +77,10 @@
     gap: 20px;
     transition: 0.4s scale;
 
+    img {
+      object-fit: cover;
+    }
+
     @media all and (width >= 550px) {
       &:hover {
         scale: 1.02;
