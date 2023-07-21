@@ -3,7 +3,7 @@
 //* Oferta Edukacjna Page
 .main-oferta-edukacjna {
   margin: auto;
-  width: min(1580px, 98%);
+  width: min(1280px, 98%);
   @include setFlex(row, space-between);
   flex-wrap: wrap;
 
@@ -70,32 +70,37 @@
   &__secondary {
     @include setFlex(column);
     gap: 20px;
-  }
-  &__article {
-    max-width: 800px;
-    @include setFlex(row);
-    gap: 20px;
-    transition: 0.4s scale;
 
-    img {
-      object-fit: cover;
-    }
+    &--list {
+      margin: 0px;
+      padding: 0px;
+      list-style: none;
+      @include setFlex(column, center, flex-start);
+      gap: 15px;
+      font-size: 1.5rem;
 
-    @media all and (width >= 550px) {
-      &:hover {
-        scale: 1.02;
+      li {
+        width: 520px;
+        padding: 7px;
+        border: $black solid 2px;
+        border-radius: 10px;
+        background-color: $secondGreen;
+        color: $white;
+        text-align: center;
+        transition: 0.4s scale;
+
+        &:hover {
+          scale: 1.04;
+        }
+
+        @media all and (width <= 530px) {
+          width: 80vw;
+        }
       }
-    }
-    @media all and (width <= 1480px) {
-      max-width: 600px;
-    }
-    @media all and (width <= 610px) {
-      width: min(400px, 98%);
-      flex-wrap: wrap-reverse;
 
-      img {
-        width: min(400px, 100%);
-        height: auto;
+      @media all and (width <= 530px) {
+        align-items: center;
+        font-size: 1.2rem;
       }
     }
   }

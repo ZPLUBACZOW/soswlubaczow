@@ -1,7 +1,6 @@
 import { Layout } from '@/template/layout'
 import Image from 'next/image'
 import CustomImage from '@/components/custom-image'
-import Link from 'next/link'
 
 export default function OfretaEdukacjna() {
   return (
@@ -16,58 +15,24 @@ export default function OfretaEdukacjna() {
           <CustomImage src="/placeholder.svg" alt="" width="420" height="420" />
 
           <div className="main-oferta-edukacjna__galery--mini">
-            <CustomImage
-              src="/placeholder.svg"
-              alt=""
-              width="200"
-              height="200"
-            />
-            <CustomImage
-              src="/placeholder.svg"
-              alt=""
-              width="200"
-              height="200"
-            />
+            <CustomImage src="/placeholder.svg" alt="" width="200" height="200" />
+            <CustomImage src="/placeholder.svg" alt="" width="200" height="200" />
           </div>
         </div>
       </section>
 
       <section className="main-oferta-edukacjna__secondary">
-        <h2 className="main-oferta-edukacjna__secondary--title">
-          Szkoła branżowa I stopnia na kierunkach:
-        </h2>
+        <h2 className="main-oferta-edukacjna__secondary--title">Struktura:</h2>
 
-        <Link href="/murarz-tynkarz">
-          <article className="main-oferta-edukacjna__article">
-            <span>
-              <h3>Murarz – tynkarz</h3>
-              <p>
-                trzyletni cykl kształcenia, zakończony jest egzaminem
-                państwowym, prowadzonym pod nadzorem Okręgowej Komisji
-                Egzaminacyjnej, który uprawnia do legalnej pracy w każdym kraju
-                U.E. na stanowisku robotnika wykwalifikowanego.
-              </p>
-            </span>
-
-            <Image src="/murarz.webp" alt="murarz" width="200" height="200" />
-          </article>
-        </Link>
-
-        <Link href="/kucharz">
-          <article className="main-oferta-edukacjna__article">
-            <span>
-              <h3>Kucharz</h3>
-              <p>
-                trzyletni cykl kształcenia, zakończony egzaminem zawodowym
-                zdawanym przed Okręgową Komisją Egzaminacyjną. Zdany egzamin
-                zawodowy daje kwalifikacje do pracy na stanowisku kucharza w
-                placówkach gastronomicznych na terenie Polski i krajów U.E.
-              </p>
-            </span>
-
-            <Image src="/kucharz.webp" alt="kucharz" width="200" height="200" />
-          </article>
-        </Link>
+        <ol className="main-oferta-edukacjna__secondary--list">
+          <li>Wczesne Wspomaganie</li>
+          <li>Oddziały Przedszkolne</li>
+          <li>Szkoła Podstawowa Nr. 3</li>
+          <li>Szkoła Przysposabiająca Do Pracy</li>
+          <li>Zespoły Rewalidacyjno-wychowawcze</li>
+          <li>Internat</li>
+          <li>Świetlica</li>
+        </ol>
       </section>
     </Layout>
   )

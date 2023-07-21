@@ -9,7 +9,7 @@ export default function Home() {
         <h1 className="main-pasje__subtitle">Ceramika</h1>
         <Image
           src="/ceramika.svg"
-          alt="image"
+          alt="ceramika ikonka"
           width="40"
           height="49"
           className="main-pasje__icon"
@@ -45,10 +45,10 @@ export default function Home() {
       <hr className="main-pasje__border" />
 
       <div className="main-pasje__description">
-        <h1 className="main-pasje__subtitle">Papieroplastyka</h1>
+        <h1 className="main-pasje__subtitle">Taniec</h1>
         <Image
-          src="/papieroplastyka.svg"
-          alt="image"
+          src="/taniec.svg"
+          alt="taniec ikonka"
           width="57"
           height="71"
           className="main-pasje__icon"
@@ -59,21 +59,21 @@ export default function Home() {
 
       <div className="main-pasje__content">
         <Image
-          src="/nasze-pasje/papieroplastyka1.png"
+          src="/nasze-pasje/taniec1.jpg"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/nasze-pasje/papieroplastyka2.png"
+          src="/nasze-pasje/taniec2.jpg"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/nasze-pasje/papieroplastyka3.png"
+          src="/nasze-pasje/taniec3.jpg"
           alt="image"
           width="300"
           height="250"
@@ -84,10 +84,10 @@ export default function Home() {
       <hr className="main-pasje__border" />
 
       <div className="main-pasje__description">
-        <h1 className="main-pasje__subtitle">Technika</h1>
+        <h1 className="main-pasje__subtitle">Przyroda</h1>
         <Image
-          src="/technika.svg"
-          alt="image"
+          src="/przyroda.svg"
+          alt="przyroda ikonka"
           width="60"
           height="80"
           className="main-pasje__icon"
@@ -98,21 +98,21 @@ export default function Home() {
 
       <div className="main-pasje__content">
         <Image
-          src="/nasze-pasje/technika1.png"
+          src="/nasze-pasje/przyroda1.jpg"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/nasze-pasje/technika2.png"
+          src="/nasze-pasje/przyroda2.jpg"
           alt="image"
           width="300"
           height="250"
           className="main-pasje__image"
         />
         <Image
-          src="/nasze-pasje/technika3.png"
+          src="/nasze-pasje/przyroda3.jpg"
           alt="image"
           width="300"
           height="250"
@@ -126,7 +126,7 @@ export default function Home() {
         <h1 className="main-pasje__subtitle">Teatr</h1>
         <Image
           src="/teatr.svg"
-          alt="image"
+          alt="teatr ikonka"
           width="55"
           height="51"
           className="main-pasje__icon"
@@ -152,160 +152,6 @@ export default function Home() {
         />
         <Image
           src="/nasze-pasje/teatr3.png"
-          alt="image"
-          width="300"
-          height="250"
-          className="main-pasje__image"
-        />
-      </div>
-      <hr className="main-pasje__border" />
-      <div className="main-pasje__description">
-        <h1 className="main-pasje__subtitle">Turystyka i rekreacja</h1>
-        <Image
-          src="/turystyka.svg"
-          alt="image"
-          width="40"
-          height="49"
-          className="main-pasje__icon"
-        />
-      </div>
-
-      <hr className="main-pasje__border" />
-
-      <div className="main-pasje__content">
-        <Image
-          src="/nasze-pasje/turystyka1.png"
-          alt="image"
-          width="300"
-          height="250"
-          className="main-pasje__image"
-        />
-        <Image
-          src="/nasze-pasje/turystyka2.png"
-          alt="image"
-          width="300"
-          height="250"
-          className="main-pasje__image"
-        />
-        <Image
-          src="/nasze-pasje/turystyka3.png"
-          alt="image"
-          width="300"
-          height="250"
-          className="main-pasje__image"
-        />
-      </div>
-
-      <hr className="main-pasje__border" />
-
-      <div className="main-pasje__description">
-        <h1 className="main-pasje__subtitle">Sport</h1>
-        <Image
-          src="/sport.svg"
-          alt="image"
-          width="68"
-          height="60"
-          className="main-pasje__icon"
-        />
-      </div>
-
-      <hr className="main-pasje__border" />
-
-      <div className="main-pasje__content">
-        <Image
-          src="/nasze-pasje/sport1.png"
-          alt="image"
-          width="300"
-          height="250"
-          className="main-pasje__image"
-        />
-        <Image
-          src="/nasze-pasje/sport2.png"
-          alt="image"
-          width="300"
-          height="250"
-          className="main-pasje__image"
-        />
-        <Image
-          src="/nasze-pasje/sport3.png"
-          alt="image"
-          width="300"
-          height="250"
-          className="main-pasje__image"
-        />
-      </div>
-
-      <hr className="main-pasje__border" />
-
-      <div className="main-pasje__description">
-        <h1 className="main-pasje__subtitle">Fotografia</h1>
-        <Image
-          src="/fotografia.svg"
-          alt="image"
-          width="58"
-          height="37"
-          className="main-pasje__icon"
-        />
-      </div>
-
-      <hr className="main-pasje__border" />
-
-      <div className="main-pasje__content">
-        <Image
-          src="/nasze-pasje/fotografia1.png"
-          alt="image"
-          width="300"
-          height="250"
-          className="main-pasje__image"
-        />
-        <Image
-          src="/nasze-pasje/fotografia2.png"
-          alt="image"
-          width="300"
-          height="250"
-          className="main-pasje__image"
-        />
-        <Image
-          src="/nasze-pasje/fotografia3.png"
-          alt="image"
-          width="300"
-          height="250"
-          className="main-pasje__image"
-        />
-      </div>
-
-      <hr className="main-pasje__border" />
-
-      <div className="main-pasje__description">
-        <h1 className="main-pasje__subtitle">Kulinaria</h1>
-        <Image
-          src="/kulinaria.svg"
-          alt="image"
-          width="52"
-          height="63"
-          className="main-pasje__icon"
-        />
-      </div>
-
-      <hr className="main-pasje__border" />
-
-      <div className="main-pasje__content">
-        <Image
-          src="/nasze-pasje/kulinaria1.png"
-          alt="image"
-          width="300"
-          height="250"
-          className="main-pasje__image"
-        />
-        <Image
-          src="/nasze-pasje/kulinaria2.png"
-          alt="image"
-          width="300"
-          height="250"
-          className="main-pasje__image"
-        />
-        <Image
-          src="/nasze-pasje/kulinaria3.png"
           alt="image"
           width="300"
           height="250"
