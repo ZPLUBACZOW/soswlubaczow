@@ -36,22 +36,46 @@
     border: 1px solid $secondGreen;
   }
   &__content {
+    margin-bottom: 25px;
+
     h2 {
       margin: 10px 0px;
     }
     p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+    }
+    a {
+      background: linear-gradient(90deg, #471ca9, #753caf);
+      text-decoration: underline;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      &::after {
+        content: ' ↗';
+      }
+    }
+  }
+  &__files p {
+    background: linear-gradient(90deg, #471ca9, #753caf);
+    text-decoration: underline;
+    font-size: 1.2rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &::after {
+      content: ' ↗';
     }
   }
   &__return {
-    font-size: 1.1rem;
+    margin-top: 0px;
+    font-size: 1.2rem;
     font-weight: 500;
     align-self: flex-end;
     text-decoration: underline;
     cursor: pointer;
   }
   &__galery {
-    margin-top: 60px;
+    margin: 60px 0px;
     width: 100%;
     @include setGrid(3, 10px);
 

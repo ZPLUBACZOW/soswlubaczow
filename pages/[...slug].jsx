@@ -2,6 +2,7 @@ import { Layout } from '@/template/layout'
 import client from '@/lib/apollo-client'
 import { gql } from '@apollo/client'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import CustomImage from '@/components/custom-image'
 
 export default function Post({ post }) {
@@ -27,6 +28,16 @@ export default function Post({ post }) {
         dangerouslySetInnerHTML={{ __html: content.html }}
       />
 
+      {files[0] && (
+        <section className="main-post__files">
+          {files.map((file) => (
+            <Link href={file.url} key={file.fileName}>
+              <p>{file.fileName}</p>
+            </Link>
+          ))}
+        </section>
+      )}
+
       <p className="main-post__return" onClick={() => router.back()}>
         ← Wróć do bloga
       </p>
@@ -35,9 +46,9 @@ export default function Post({ post }) {
         <>
           <hr className="main-post__border" />
           <section className="main-post__galery">
-            {images.map((image, i) => (
+            {images.map((image) => (
               <CustomImage
-                key={i}
+                key={image.fileName}
                 src={image.url}
                 alt={title}
                 width="500"
@@ -74,6 +85,7 @@ export async function getStaticProps({ params }) {
           }
           files {
             url
+            fileName
           }
           images {
             url
