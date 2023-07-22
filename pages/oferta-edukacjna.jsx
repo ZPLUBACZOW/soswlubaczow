@@ -12,11 +12,26 @@ export default function OfretaEdukacjna() {
         </h2>
 
         <div className="main-oferta-edukacjna__galery">
-          <CustomImage src="/placeholder.svg" alt="" width="420" height="420" />
+          <CustomImage
+            src="/oferta-edukacjna/osrodek.jpg"
+            alt="ośrodek"
+            width="420"
+            height="420"
+          />
 
           <div className="main-oferta-edukacjna__galery--mini">
-            <CustomImage src="/placeholder.svg" alt="" width="200" height="200" />
-            <CustomImage src="/placeholder.svg" alt="" width="200" height="200" />
+            <CustomImage
+              src="/oferta-edukacjna/hamak.jpg"
+              alt="hamak"
+              width="400"
+              height="400"
+            />
+            <CustomImage
+              src="/oferta-edukacjna/skakanie.jpg"
+              alt="dzieci"
+              width="400"
+              height="400"
+            />
           </div>
         </div>
       </section>

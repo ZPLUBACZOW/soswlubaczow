@@ -41,6 +41,10 @@
     gap: 20px;
     flex-wrap: wrap;
 
+    img {
+      object-fit: cover;
+    }
+
     @media all and (width <= 420px) {
       width: 98%;
 
@@ -52,6 +56,11 @@
     &--mini {
       @include setFlex(column);
       gap: 20px;
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
 
       @media all and (width <= 653px) {
         flex-direction: row;
