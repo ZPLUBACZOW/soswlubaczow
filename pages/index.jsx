@@ -46,7 +46,7 @@ export default function Home() {
           <p>Dekralacja dostępności</p>
         </Link>
         <Link href="https://media.graphassets.com/yWEIVvKxRaWF2dkIR51N">
-          <p>Klauzura indormacjna</p>
+          <p>Klauzula informacyjna</p>
         </Link>
       </div>
     </Layout>
