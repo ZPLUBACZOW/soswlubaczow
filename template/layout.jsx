@@ -6,12 +6,17 @@ import { Inter } from '@next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const Layout = ({ children, title, styleName }) => {
+export const Layout = ({ children, title, description, styleName }) => {
+  const descriptionTamplate = 'Specjalistyczny Ośrodek Szkolno-Wychowawczy w Lubaczowie'
+
   return (
     <>
       <Head>
         <title>{`${title} | Specjalistyczny Ośrodek Szkolno-Wychowawczy w Lubaczowie`}</title>
-        <meta name="description" content="opis" />
+        <meta
+          name="description"
+          content={description ? description : descriptionTamplate}
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 

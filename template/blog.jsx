@@ -2,9 +2,17 @@ import { Layout } from './layout'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function Blog({ news, tiles, title, titleSpan, icon, props }) {
+export default function Blog({
+  news,
+  tiles,
+  title,
+  titleSpan,
+  description,
+  icon,
+  props,
+}) {
   return (
-    <Layout title={title} styleName="blog">
+    <Layout title={title} description={description} styleName="blog">
       <section className="main-blog__header">
         <div className="main-blog__header--span">
           <h3>{title}</h3>

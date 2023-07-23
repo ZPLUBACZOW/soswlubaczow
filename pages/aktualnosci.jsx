@@ -19,6 +19,7 @@ export default function Aktualnosci({ posts }) {
       news={true}
       tiles={true}
       title="Aktualności"
+      description="Aktualności W Specjalistyczny Ośrodek Szkolno-Wychowawczy w Lubaczowie"
       titleSpan="Najnowsze wiadomości!!"
       icon={svg}
       props={posts}

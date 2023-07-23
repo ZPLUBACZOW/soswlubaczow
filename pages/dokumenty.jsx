@@ -23,6 +23,7 @@ export default function Documents({ documents }) {
     <Blog
       title="Dokumenty"
       titleSpan="Potrzebne dokumenty!"
+      description="Dokumenty W Specjalistyczny Ośrodek Szkolno-Wychowawczy w Lubaczowie"
       icon={svg}
       props={documents}
     />

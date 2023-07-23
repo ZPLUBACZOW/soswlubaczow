@@ -1,5 +1,4 @@
 import { Layout } from '@/template/layout'
-import Image from 'next/image'
 import CustomImage from '@/components/custom-image'
 
 export default function OfretaEdukacjna() {

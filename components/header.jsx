@@ -9,8 +9,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentPosition =
-        window.pageYOffset || document.documentElement.scrollTop
+      const currentPosition = window.pageYOffset || document.documentElement.scrollTop
       const pageWidth = screen.width
 
       setScrollPosition(currentPosition)
@@ -44,7 +43,7 @@ export default function Header() {
             <Link href="/">
               <Image
                 src="/Logo.svg"
-                alt=""
+                alt="Logo SOSW"
                 width="100"
                 height="100"
                 className="header__logo"
@@ -52,7 +51,7 @@ export default function Header() {
             </Link>
 
             <h1>
-              <span>zespół placówek im. Jana Pawła II</span>
+              <span>Zespół Placówek Im. Jana Pawła II</span>
               <br />
               SPECJALISTYCZNY OŚRODEK <br /> SZKOLNO-WYCHOWAWCZY W LUBACZOWIE
             </h1>
