@@ -13,7 +13,7 @@ export default function Post({ post }) {
     <Layout title={title} styleName="post">
       <CustomImage
         src={mainImage.url}
-        alt={title}
+        alt={`${title} | ${mainImage.fileName}`}
         width="740"
         height="550"
         className="main-post__main-image"
@@ -50,7 +50,7 @@ export default function Post({ post }) {
               <CustomImage
                 key={image.fileName}
                 src={image.url}
-                alt={title}
+                alt={`${title} | ${image.fileName}`}
                 width="500"
                 height="500"
                 className="main-post__galery--image"
@@ -79,6 +79,7 @@ export async function getStaticProps({ params }) {
           date
           mainImage {
             url
+            fileName
           }
           content {
             html
@@ -89,6 +90,7 @@ export async function getStaticProps({ params }) {
           }
           images {
             url
+            fileName
           }
         }
       }

@@ -55,4 +55,10 @@
       width: 95%;
     }
   }
+  &__declarations {
+    width: 100%;
+    @include setFlex(row, space-between);
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
 }

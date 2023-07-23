@@ -1,5 +1,6 @@
 import { Layout } from '@/template/layout'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -39,6 +40,14 @@ export default function Home() {
           szkole podstawowej Edukacje w szkole przysposabiającej do pracy Zespoły
           rewalidacyjno-wychowawcze Świetlicę oraz internat
         </p>
+      </div>
+      <div className="main-page__declarations">
+        <Link href="https://media.graphassets.com/uD402W5XRXuriyulRB7R">
+          <p>Dekralacja dostępności</p>
+        </Link>
+        <Link href="https://media.graphassets.com/yWEIVvKxRaWF2dkIR51N">
+          <p>Klauzura indormacjna</p>
+        </Link>
       </div>
     </Layout>
   )
