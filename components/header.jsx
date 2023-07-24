@@ -53,7 +53,7 @@ export default function Header() {
             <h1>
               <span>Zespół Placówek Im. Jana Pawła II</span>
               <br />
-              SPECJALISTYCZNY OŚRODEK <br /> SZKOLNO-WYCHOWAWCZY W LUBACZOWIE
+              SPECJALNY OŚRODEK <br /> SZKOLNO-WYCHOWAWCZY W LUBACZOWIE
             </h1>
           </div>
         </div>

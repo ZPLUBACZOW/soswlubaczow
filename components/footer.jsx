@@ -7,17 +7,14 @@ export default function Footer() {
       <div className="footer--container">
         <div className="footer__description">
           <h1 className="footer__title">
-            SPECJALISTYCZNY OŚRODEK <br /> SZKOLNO-WYCHOWAWCZY W LUBACZOWIE
+            SPECJALNY OŚRODEK <br /> SZKOLNO-WYCHOWAWCZY W LUBACZOWIE
           </h1>
 
           <div className="footer__text">
             <p>tel/fax.: (16) 632 10 88</p>
             <p>E-mail: sekretariat@zplubaczow.com</p>
             <p>
-              <Link
-                href="https://goo.gl/maps/6hV9FaHmb46H7WXx9"
-                target="_balnk"
-              >
+              <Link href="https://goo.gl/maps/6hV9FaHmb46H7WXx9" target="_balnk">
                 Adres: Tadeusza Kościuszki 145
               </Link>
             </p>
@@ -52,53 +49,28 @@ export default function Footer() {
 
         <div className="footer__certificates">
           <div className="footer__certificat">
-            <Image
-              src="/checkmark.svg"
-              alt="checkmark"
-              width="16"
-              height="16"
-            />
+            <Image src="/checkmark.svg" alt="checkmark" width="16" height="16" />
             <p>WCAG 2.1</p>
           </div>
 
           <div className="footer__certificat">
-            <Image
-              src="/checkmark.svg"
-              alt="checkmark"
-              width="16"
-              height="16"
-            />
+            <Image src="/checkmark.svg" alt="checkmark" width="16" height="16" />
             <p>SECTION 508</p>
           </div>
 
           <div className="footer__certificat">
-            <Image
-              src="/checkmark.svg"
-              alt="checkmark"
-              width="16"
-              height="16"
-            />
+            <Image src="/checkmark.svg" alt="checkmark" width="16" height="16" />
             <p>EAA/EN 301549</p>
           </div>
 
           <div className="footer__certificat">
-            <Image
-              src="/checkmark.svg"
-              alt="checkmark"
-              width="16"
-              height="16"
-            />
+            <Image src="/checkmark.svg" alt="checkmark" width="16" height="16" />
             <p>IS 5568</p>
           </div>
         </div>
 
         <div className="footer__w3c">
-          <Image
-            src="/w3c-certificates.svg"
-            alt="certificates"
-            width="50"
-            height="100"
-          />
+          <Image src="/w3c-certificates.svg" alt="certificates" width="50" height="100" />
           <Image src="/w3c-html.svg" alt="html" width="50" height="100" />
           <Image src="/w3c-css.svg" alt="css" width="50" height="100" />
         </div>

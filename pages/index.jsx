@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Layout title="Strona Główna" styleName="page">
       <h1 className="main-page__title">
-        o specjalistycznym ośrodku <br />
+        o specjalnym ośrodku <br />
         szkolno-wychowawczym w<span> lubaczowie</span>
       </h1>
 
