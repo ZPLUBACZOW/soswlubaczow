@@ -1,0 +1,101 @@
+@use '@/app/variables' as *;
+
+//* Post Page
+.post {
+  margin: auto;
+  margin-top: 60px;
+  width: min(740px, 98%);
+  @include setFlex(column, flex-start, flex-start);
+
+  &__main-image {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    object-fit: cover;
+  }
+  &__date {
+    color: $secondColor;
+    font-weight: bold;
+    font-size: 1.2rem;
+    @include setFlex(row);
+    gap: 5px;
+
+    &::before {
+      display: block;
+      height: 22px;
+      content: url(/calendar.png);
+    }
+  }
+  &__title {
+    margin: 0px;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: $textColor;
+  }
+  &__border {
+    width: 100%;
+    border: 1px solid $secondColor;
+  }
+  &__content {
+    margin-bottom: 25px;
+
+    h2 {
+      margin: 10px 0px;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    a {
+      background: linear-gradient(90deg, #471ca9, #753caf);
+      text-decoration: underline;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      &::after {
+        content: ' ↗';
+      }
+    }
+  }
+  &__files p {
+    background: linear-gradient(90deg, #471ca9, #753caf);
+    text-decoration: underline;
+    font-size: 1.2rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &::after {
+      content: ' ↗';
+    }
+  }
+  &__return {
+    margin-top: 0px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    align-self: flex-end;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &__galery {
+    margin: 60px 0px;
+    width: 100%;
+    @include setGrid(3, 10px);
+
+    &--image {
+      margin: auto;
+      width: min(240px, 100%);
+      height: 240px;
+      object-fit: cover;
+      transition: 0.4s scale;
+
+      &:hover {
+        scale: 1.02;
+      }
+    }
+    @media all and (width <= 750px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media all and (width <= 500px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

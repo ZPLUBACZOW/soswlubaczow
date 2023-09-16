@@ -1,0 +1,31 @@
+//* Color variables
+$white: #fff;
+$black: #000;
+$mainGradient: linear-gradient(90deg, #3e3c9f, #271ab6);
+$mainColor: #271ab6;
+$secondColor: #3e3c9f;
+$textColor: #1e1e1e;
+$otherText: #8a8a8a;
+
+//* Flex template
+@mixin setFlex($flex-direction, $justify-content: center, $align-items: center) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+//* Grid template
+@mixin setGrid($columns, $gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+//* Clamp template
+@mixin setClamp($line-clamp: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line-clamp;
+  overflow: hidden;
+}

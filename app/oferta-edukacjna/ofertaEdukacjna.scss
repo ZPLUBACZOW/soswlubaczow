@@ -1,0 +1,121 @@
+@use '../variables' as *;
+
+//* Oferta Edukacjna Page
+.oferta-edukacjna {
+  margin: auto;
+  width: min(1280px, 98%);
+  @include setFlex(row, space-between);
+  flex-wrap: wrap;
+
+  &__title {
+    margin-top: 55px;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 2.8rem;
+    color: $textColor;
+
+    @media all and (width <= 550px) {
+      font-size: 2.2rem;
+    }
+  }
+  &__prymary {
+    @include setFlex(column);
+    gap: 20px;
+  }
+  &__prymary--title,
+  &__secondary--title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: $textColor;
+
+    @media all and (width > 1270px) {
+      align-self: flex-start;
+    }
+    @media all and (width <= 550px) {
+      font-size: 1.5rem;
+    }
+  }
+  &__galery {
+    @include setFlex(row);
+    gap: 20px;
+    flex-wrap: wrap;
+
+    img {
+      object-fit: cover;
+    }
+
+    @media all and (width <= 420px) {
+      width: 98%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &--mini {
+      @include setFlex(column);
+      gap: 20px;
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
+
+      @media all and (width <= 653px) {
+        flex-direction: row;
+      }
+      @media all and (width <= 420px) {
+        width: 98%;
+        gap: 2%;
+
+        img {
+          width: 50%;
+          height: auto;
+        }
+      }
+    }
+  }
+  &__secondary {
+    @include setFlex(column);
+    gap: 20px;
+
+    &--list {
+      margin: 0px;
+      padding: 0px;
+      list-style: none;
+      @include setFlex(column, center, flex-start);
+      gap: 15px;
+      font-size: 1.5rem;
+
+      li {
+        width: 520px;
+        padding: 7px;
+        border: $black solid 2px;
+        border-radius: 10px;
+        background-color: $secondColor;
+        color: $white;
+        text-align: center;
+        transition: 0.4s scale;
+
+        &:hover {
+          scale: 1.04;
+        }
+
+        @media all and (width <= 530px) {
+          width: 80vw;
+        }
+      }
+
+      @media all and (width <= 530px) {
+        align-items: center;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  @media all and (width <= 1270px) {
+    justify-content: center;
+    gap: 20px;
+  }
+}

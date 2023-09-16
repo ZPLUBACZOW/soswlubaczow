@@ -1,0 +1,51 @@
+@use '@/app/variables' as *;
+
+.accessibility {
+  position: fixed;
+  top: 25%;
+  z-index: 10;
+  @include setFlex(row-reverse);
+
+  &--on {
+    left: 0px;
+    transition: 0.3s left ease-in;
+  }
+  &--off {
+    left: -160px;
+    transition: 0.3s left ease-out;
+  }
+
+  &__image {
+    height: 50px;
+    cursor: pointer;
+    transition: 0.2s height linear;
+
+    &--max {
+      height: 140px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-image: linear-gradient(90deg, $secondColor, $mainColor);
+    }
+  }
+  &__menu {
+    position: relative;
+    margin: 0px;
+    padding: 15px 10px;
+    width: 160px;
+    list-style: none;
+    background-image: linear-gradient(90deg, $mainColor, $secondColor);
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: bold;
+
+    li {
+      cursor: pointer;
+    }
+  }
+
+  @media all and (width <= 600px) {
+    display: none;
+  }
+}

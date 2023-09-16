@@ -1,0 +1,99 @@
+@use '@/app/variables' as *;
+
+.tiles {
+  margin-inline: auto;
+  margin-top: 40px;
+  width: min(1280px, 100%);
+
+  &__header {
+    margin-top: 80px;
+    margin-bottom: 60px;
+    width: 100%;
+    @include setFlex(row, space-between);
+
+    &--span {
+      max-width: 500px;
+
+      h3 {
+        margin: 0px;
+        color: $secondColor;
+        font-size: 1.5rem;
+      }
+      h1 {
+        margin: 5px 0px;
+        color: $textColor;
+        font-size: 2.5rem;
+      }
+    }
+
+    &--icon {
+      display: none;
+
+      @media all and (width >= 600px) {
+        display: block;
+      }
+    }
+  }
+  &__container {
+    width: 100%;
+    @include setGrid(3, 40px);
+
+    @media all and (width <= 1280px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media all and (width <= 840px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__arrow {
+    width: 30px;
+    height: auto;
+    align-self: flex-end;
+  }
+  &__date {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+    color: $secondColor;
+    font-weight: bold;
+
+    &::before {
+      display: block;
+      width: 16px;
+      height: 16px;
+      content: url(/calendar.png);
+    }
+  }
+  &__post {
+    margin-inline: auto;
+    width: min(400px, 98%);
+    @media all and (width >= 400px) {
+      max-height: 550px;
+    }
+    @include setFlex(column, flex-start, flex-start);
+    transition: 0.4s scale;
+
+    @media all and (width > 400px) {
+      &:hover {
+        scale: 1.05;
+      }
+    }
+    h2 {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      color: $textColor;
+      font-size: 1.6rem;
+      @include setClamp(2);
+    }
+    &--image {
+      border-radius: 5px;
+      object-fit: cover;
+
+      @media all and (width <= 400px) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

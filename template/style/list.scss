@@ -1,0 +1,79 @@
+@use '@/app/variables' as *;
+
+.list {
+  margin-inline: auto;
+  margin-top: 40px;
+  width: min(1280px, 100%);
+
+  &__header {
+    margin-top: 80px;
+    margin-bottom: 60px;
+    width: 100%;
+    @include setFlex(row, space-between);
+
+    &--span {
+      max-width: 500px;
+
+      h3 {
+        margin: 0px;
+        color: $secondColor;
+        font-size: 1.5rem;
+      }
+      h1 {
+        margin: 5px 0px;
+        color: $textColor;
+        font-size: 2.5rem;
+      }
+    }
+    &--icon {
+      display: none;
+
+      @media all and (width >= 600px) {
+        display: block;
+      }
+    }
+  }
+  &__container {
+    width: 100%;
+    @include setGrid(2, 80px);
+
+    @media all and (width <= 1280px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__arrow {
+    width: 30px;
+    height: auto;
+    align-self: flex-end;
+  }
+  &__post {
+    margin: auto;
+    width: min(600px, 98%);
+    @include setFlex(row, flex-start);
+    gap: 25px;
+    transition: 0.4s scale;
+
+    @media all and (width > 400px) {
+      &:hover {
+        scale: 1.05;
+      }
+    }
+    span {
+      width: 100%;
+      @include setFlex(column, center, flex-start);
+    }
+    @media all and (width <= 400px) {
+      flex-wrap: wrap;
+      text-align: center;
+
+      span p,
+      h2 {
+        margin: 10px auto;
+        width: auto;
+      }
+      img {
+        margin: auto;
+      }
+    }
+  }
+}
