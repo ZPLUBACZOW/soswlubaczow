@@ -1,3 +1,6 @@
+'use client'
+
+import './style/header.scss'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
