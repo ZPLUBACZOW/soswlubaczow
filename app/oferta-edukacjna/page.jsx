@@ -6,20 +6,22 @@ export default function OfretaEdukacjna() {
     <main className="oferta-edukacjna">
       <h1 className="oferta-edukacjna__title">Oferta Edukacjna</h1>
       <section className="oferta-edukacjna__prymary">
-        <h2 className="oferta-edukacjna__prymary--title">Szkoła podstawowa klasy 4-8:</h2>
+        <h2 className="oferta-edukacjna__prymary--title">
+          Szkoła podstawowa klasy 4-8:
+        </h2>
 
         <div className="oferta-edukacjna__galery">
           <ScaledImage
-            src="/ofertaEdukacjna/osrodek.jpg"
-            alt="ośrodek"
+            src="/ofertaEdukacjna/globus.jpg"
+            alt="dzieci z globusem"
             width="420"
             height="420"
           />
 
           <div className="oferta-edukacjna__galery--mini">
             <ScaledImage
-              src="/ofertaEdukacjna/hamak.jpg"
-              alt="hamak"
+              src="/ofertaEdukacjna/teleskop.jpg"
+              alt="dzieci z teleskopem"
               width="400"
               height="400"
             />
@@ -34,7 +36,9 @@ export default function OfretaEdukacjna() {
       </section>
 
       <section className="oferta-edukacjna__secondary">
-        <h2 className="oferta-edukacjna__secondary--title">Struktura:</h2>
+        <h2 className="oferta-edukacjna__secondary--title">
+          W ośrodku funkcjonują:
+        </h2>
 
         <ol className="oferta-edukacjna__secondary--list">
           <li>Wczesne Wspomaganie</li>
