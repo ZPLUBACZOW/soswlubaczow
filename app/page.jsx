@@ -3,7 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Strona Główna | Specjalistyczny Ośrodek Szkolno-Wychowawczy w Lubaczowie',
+  title:
+    'Strona Główna | Specjalistyczny Ośrodek Szkolno-Wychowawczy w Lubaczowie',
 }
 
 export default function Home() {
@@ -16,13 +17,14 @@ export default function Home() {
 
       <div className="main-page__content">
         <p>
-          Specjalny ośrodek szkolno-wychowawczy w lubaczowie pomaga dzieciom z
-          niepełnosprawnościami w prawidłowym rozwoju zapewniając profesjonalną opiekę
-          specjalistów do pracy z potrzebującymi owej opieki dziećmi
+          W naszym ośrodku zapewniamy edukację, wychowanie i terapię dzieciom i
+          młodzieży z niepełnosprawnością intelektualną w stopniu umiarkowanym,
+          znacznym, głębokim, z autyzmem, Zespołem Aspergera i innymi
+          zaburzeniami rozwoju w przedziale wiekowym od 3 do 25 roku życia.
         </p>
 
         <Image
-          src="/mainPage/mainFirst.png"
+          src="/mainPage/mainFirst.jpg"
           alt="zebranie"
           width="541"
           height="263"
@@ -32,7 +34,7 @@ export default function Home() {
 
       <div className="main-page__content">
         <Image
-          src="/mainPage/mainSecond.png"
+          src="/mainPage/mainSecond.jpg"
           alt="zoo"
           width="430"
           height="290"
@@ -40,9 +42,11 @@ export default function Home() {
         />
 
         <p>
-          Nasz ośrodek oferuje: Wczesne wspomaganie dziecka Opiekę przedszkolną Edukacje w
-          szkole podstawowej Edukacje w szkole przysposabiającej do pracy Zespoły
-          rewalidacyjno-wychowawcze Świetlicę oraz internat
+          Zdając sobie sprawę z ograniczeń i słabości naszych podopiecznych, a
+          jednocześnie wierząc w możliwości poprawy jakości ich życia, za główny
+          cel przyjeliśmy wspieranie wszechstronnego rozwoju na miarę ich
+          możliwości, spełnienie oczekiwań, zaspokajanie potrzeb oraz
+          wyposażenie uczniów w podstawowe umiejetności życiowe i społeczne.
         </p>
       </div>
       <div className="main-page__declarations">

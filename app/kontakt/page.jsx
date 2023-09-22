@@ -14,8 +14,8 @@ export default function Home() {
           className="kontakt__image"
         />
         <h3>
-          ZESPÓŁ PLACÓWEK IM. JANA PAWŁA II W LUBACZOWIE <br /> Specjalny Ośrodek
-          Szkolno-Wychowawczy
+          ZESPÓŁ PLACÓWEK IM. JANA PAWŁA II W LUBACZOWIE <br /> Specjalny
+          Ośrodek Szkolno-Wychowawczy
         </h3>
 
         <h3>ul. Kościuszki 145, 37-600 Lubaczów</h3>
@@ -33,8 +33,8 @@ export default function Home() {
 
       <div className="kontakt__description">
         <h3>
-          <span>tel/fax: (16) 632 10 88</span> - mgr Małgorzata Jachyra-Mazepa Dyrektor{' '}
-          <br /> Zespołu Placówek im Jana Pawła II w Lubaczowie
+          <span>tel/fax: (16) 632 10 88</span> - mgr Małgorzata Jachyra-Mazepa
+          Dyrektor <br /> Zespołu Placówek im Jana Pawła II w Lubaczowie
         </h3>
         <h3>
           <span>tel/fax: (16) 632 82 99</span> - mgr Renata Sieradzka-Koperczak
@@ -42,8 +42,8 @@ export default function Home() {
           dydaktycznych Specjalnego Ośrodka Szkolno-Wychowawczego w Lubaczowie
         </h3>
         <h3>
-          <span>tel/fax: (16) 632 82 82</span> - mgr Agata Gardzielik-Misztal Wicedyrektor
-          d/s
+          <span>tel/fax: (16) 632 82 82</span> - mgr Agata Gardzielik-Misztal
+          Wicedyrektor d/s
           <br />
           wychowawczych Specjalnego Ośrodka Szkolno-Wychowawczego w Lubaczowie
         </h3>
@@ -65,7 +65,8 @@ export default function Home() {
           Psycholog:
           <br />
           <span>
-            a.zielinska@zplubaczow.com <br />
+            e.wisniewska@zplubaczow.com
+            <br />
             e.wisniewska-jaracz@zplubaczow.com
           </span>
           <br />
