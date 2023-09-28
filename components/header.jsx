@@ -12,7 +12,8 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentPosition = window.pageYOffset || document.documentElement.scrollTop
+      const currentPosition =
+        window.pageYOffset || document.documentElement.scrollTop
       const pageWidth = screen.width
 
       setScrollPosition(currentPosition)
@@ -45,7 +46,7 @@ export default function Header() {
           <div className="header__center">
             <Link href="/">
               <Image
-                src="/Logo.svg"
+                src="/Logo.png"
                 alt="Logo SOSW"
                 width="100"
                 height="100"
