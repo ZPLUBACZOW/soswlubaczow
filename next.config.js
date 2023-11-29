@@ -2,6 +2,8 @@
 const nextConfig = {
   images: {
     domains: ['media.graphassets.com'],
+    svgAllow: true,
+    dangerouslyAllowSVG: true,
   },
 }
 

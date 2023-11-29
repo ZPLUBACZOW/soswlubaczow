@@ -29,6 +29,7 @@
     font-size: 2.5rem;
   }
   &__content {
+    padding-inline: 10px;
     width: 100%;
     @include setFlex(row);
     gap: 60px;
