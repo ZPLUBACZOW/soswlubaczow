@@ -20,21 +20,21 @@ export default function Home() {
 
       <div className="pasje__content">
         <Image
-          src="/naszePasje/ceramika1.png"
+          src="/naszePasje/ceramika1.JPG"
           alt="image"
           width="300"
           height="250"
           className="pasje__image"
         />
         <Image
-          src="/naszePasje/ceramika2.png"
+          src="/naszePasje/ceramika2.jpg"
           alt="image"
           width="300"
           height="250"
           className="pasje__image"
         />
         <Image
-          src="/naszePasje/ceramika3.png"
+          src="/naszePasje/ceramika3.JPG"
           alt="image"
           width="300"
           height="250"
