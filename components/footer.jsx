@@ -29,7 +29,7 @@ export default function Footer() {
 
           <h4 className="footer__autors">
             <Link href="https://do-moon.vercel.app">
-              &copy;2023 DoMoon project | All rights reserved
+              &copy;{new Date().getFullYear()} DoMoon project | All rights reserved
             </Link>
           </h4>
         </div>
