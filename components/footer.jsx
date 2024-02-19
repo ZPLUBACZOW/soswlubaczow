@@ -28,8 +28,8 @@ export default function Footer() {
           </div>
 
           <h4 className="footer__autors">
-            <Link href="https://do-moon.vercel.app">
-              &copy;{new Date().getFullYear()} DoMoon project | All rights reserved
+            <Link href="https://www.gbkomputer.pl">
+              &copy;{new Date().getFullYear()} GB Komputer | All rights reserved
             </Link>
           </h4>
         </div>
