@@ -1,8 +1,11 @@
-import List from '@/template/list'
-import { getDocumentsPosts } from '@/lib/queries'
+'use client'
 
-export default async function dlaRodzicow() {
-  const documents = await getDocumentsPosts()
+import { useQuery } from '@apollo/client'
+import client from '@/lib/apolloClient'
+import { GET_DOCUMENTS } from '@/lib/queries'
+import List from '@/template/list'
+
+export default function Dokumenty() {
   const svg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,6 +21,12 @@ export default async function dlaRodzicow() {
       />
     </svg>
   )
+
+  const { loading, error, data } = useQuery(GET_DOCUMENTS, { client })
+
+  const documents = data?.Documents || []
+
+  if (error) return <h1>Błąd pobierania danych: {error.message}</h1>
 
   return (
     <List
