@@ -1,8 +1,11 @@
-import Tiles from '@/template/tiles'
-import { getNewsPosts } from '@/lib/queries'
+'use client'
 
-export default async function Aktualnosci() {
-  const news = await getNewsPosts()
+import { useQuery } from '@apollo/client'
+import client from '@/lib/apolloClient'
+import { GET_TRANSMISSIONS } from '@/lib/queries'
+import Tiles from '@/template/tiles'
+
+export default function Aktualnosci() {
   const svg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,9 +17,15 @@ export default async function Aktualnosci() {
     </svg>
   )
 
+  const { loading, error, data } = useQuery(GET_TRANSMISSIONS, { client })
+
+  const transmissions = data?.Transmissions || []
+
+  if (error) return <h1>Błąd pobierania danych: {error.message}</h1>
+
   return (
     <Tiles
-      props={news}
+      props={transmissions}
       title="Aktualności"
       titleSpan="Najnowsze wiadomości!!"
       icon={svg}

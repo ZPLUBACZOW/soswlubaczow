@@ -1,8 +1,11 @@
-import Tiles from '@/template/tiles'
-import { getAnnouncementsPosts } from '@/lib/queries'
+'use client'
 
-export default async function Aktualnosci() {
-  const announcements = await getAnnouncementsPosts()
+import { useQuery } from '@apollo/client'
+import client from '@/lib/apolloClient'
+import { GET_ANNOUNCEMENTS } from '@/lib/queries'
+import Tiles from '@/template/tiles'
+
+export default function Ogloszenia() {
   const svg = (
     <svg
       fill="#000000"
@@ -39,6 +42,12 @@ export default async function Aktualnosci() {
       </g>
     </svg>
   )
+
+  const { loading, error, data } = useQuery(GET_ANNOUNCEMENTS, { client })
+
+  const announcements = data?.Announcements || []
+
+  if (error) return <h1>Błąd pobierania danych: {error.message}</h1>
 
   return (
     <Tiles
