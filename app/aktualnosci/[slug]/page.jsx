@@ -1,19 +1,17 @@
-'use client'
-
-import { useQuery } from '@apollo/client'
-import client from '@/lib/apolloClient'
-import { GET_TRANSMISSION } from '@/lib/queries'
 import Post from '@/template/post'
+import { getNewsPostBySlug } from '@/lib/queries'
 
-export default function AktualnosciPost({ params }) {
-  const { loading, error, data } = useQuery(GET_TRANSMISSION, {
-    variables: { slug: params.slug },
-    client,
-  })
+export async function generateMetadata({ params }) {
+  const news = await getNewsPostBySlug(params)
+  const title = news[0] ? news[0].title : '404'
 
-  const transmission = data?.TransmissionBySlug || []
+  return {
+    title: title,
+  }
+}
 
-  if (error) return <h1>Błąd pobierania danych: {error.message}</h1>
+export default async function AktualnosciPost({ params }) {
+  const news = await getNewsPostBySlug(params)
 
-  return <Post data={transmission} params="aktualnosci" />
+  return <Post data={news} params="aktualnosci" />
 }

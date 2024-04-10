@@ -1,17 +1,9 @@
-'use client'
-
 import './naszePasje.scss'
-import { useQuery } from '@apollo/client'
-import client from '@/lib/apolloClient'
-import { GET_OURPASSIONS } from '@/lib/queries'
 import Image from 'next/image'
+import { getOurPassions } from '@/lib/queries'
 
-export default function NaszePasje() {
-  const { loading, error, data } = useQuery(GET_OURPASSIONS, { client })
-
-  const ourPassions = data?.OurPassions || []
-
-  if (error) return <h1>Błąd pobierania danych: {error.message}</h1>
+export default async function NaszePasje() {
+  const ourPassions = await getOurPassions()
 
   return (
     <main className="pasje">
@@ -23,7 +15,7 @@ export default function NaszePasje() {
             <h1 className="pasje__subtitle">{ourPassion.title}</h1>
 
             <Image
-              src={ourPassion.icon}
+              src={ourPassion.icon.url}
               alt={ourPassion.title}
               width="40"
               height="50"
@@ -36,12 +28,12 @@ export default function NaszePasje() {
           <div className="pasje__content">
             {ourPassion.images.map((image) => (
               <Image
-                src={image}
+                src={image.url}
                 alt={ourPassion.title}
                 width={300}
                 height={250}
                 className="pasje__image"
-                key={image}
+                key={image.id}
               />
             ))}
           </div>

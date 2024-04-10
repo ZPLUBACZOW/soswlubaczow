@@ -1,11 +1,8 @@
-'use client'
-
-import { useQuery } from '@apollo/client'
-import client from '@/lib/apolloClient'
-import { GET_TRANSMISSIONS } from '@/lib/queries'
 import Tiles from '@/template/tiles'
+import { getNewsPosts } from '@/lib/queries'
 
-export default function Aktualnosci() {
+export default async function Aktualnosci() {
+  const news = await getNewsPosts()
   const svg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,15 +14,9 @@ export default function Aktualnosci() {
     </svg>
   )
 
-  const { loading, error, data } = useQuery(GET_TRANSMISSIONS, { client })
-
-  const transmissions = data?.Transmissions || []
-
-  if (error) return <h1>Błąd pobierania danych: {error.message}</h1>
-
   return (
     <Tiles
-      props={transmissions}
+      props={news}
       title="Aktualności"
       titleSpan="Najnowsze wiadomości!!"
       icon={svg}
