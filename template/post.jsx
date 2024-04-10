@@ -1,6 +1,7 @@
 import './style/post.scss'
 import Link from 'next/link'
 import ScaledImage from '@/components/scaledImage'
+import GetFileName from '@/lib/getFileName'
 import { notFound } from 'next/navigation'
 
 export default function Post({ data, params }) {
@@ -26,8 +27,8 @@ export default function Post({ data, params }) {
       {data.files && (
         <section className="post__files">
           {data.files.map((file) => (
-            <Link href={file.url} key={file}>
-              <p>{file}</p>
+            <Link href={file} key={file}>
+              <p>{GetFileName(file)}</p>
             </Link>
           ))}
         </section>
@@ -37,7 +38,7 @@ export default function Post({ data, params }) {
         ← Wróć do bloga
       </Link>
 
-      {data.images && (
+      {data.images && data.images[0] && (
         <>
           <hr className="post__border" />
           <section className="post__galery">
@@ -45,7 +46,7 @@ export default function Post({ data, params }) {
               <ScaledImage
                 key={image}
                 src={image}
-                alt={`${data.title} | ${image}`}
+                alt={`${data.title} | ${GetFileName(image)}`}
                 width="500"
                 height="500"
                 className="post__galery--image"
