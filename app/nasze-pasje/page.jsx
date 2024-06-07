@@ -11,6 +11,7 @@ export default function NaszePasje() {
 
   const ourPassions = data?.OurPassions || []
 
+  if (loading) return <h1>Ładowanie danych...</h1>
   if (error) return <h1>Błąd pobierania danych: {error.message}</h1>
 
   return (
@@ -23,8 +24,8 @@ export default function NaszePasje() {
             <h1 className="pasje__subtitle">{ourPassion.title}</h1>
 
             <Image
-              src={ourPassion.icon}
-              alt={ourPassion.title}
+              src={ourPassion.icon.url}
+              alt={ourPassion.icon.description}
               width="40"
               height="50"
               className="pasje__icon"
@@ -36,12 +37,12 @@ export default function NaszePasje() {
           <div className="pasje__content">
             {ourPassion.images.map((image) => (
               <Image
-                src={image}
-                alt={ourPassion.title}
+                src={image.url}
+                alt={image.description}
                 width={300}
                 height={250}
                 className="pasje__image"
-                key={image}
+                key={image.id}
               />
             ))}
           </div>

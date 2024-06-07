@@ -21,8 +21,8 @@ export default function Tiles({ props, title, titleSpan, icon, param }) {
               <p className="tiles__date">{prop.date}</p>
 
               <Image
-                src={prop.mainImage}
-                alt={prop.title}
+                src={prop.mainImage.url}
+                alt={prop.description}
                 width="400"
                 height="350"
                 className="tiles__post--image"

@@ -1,15 +1,14 @@
 import './style/post.scss'
 import Link from 'next/link'
 import ScaledImage from '@/components/scaledImage'
-import GetFileName from '@/lib/getFileName'
 import { notFound } from 'next/navigation'
 
 export default function Post({ data, params }) {
   return data ? (
     <main className="post">
       <ScaledImage
-        src={data.mainImage}
-        alt={`${data.title} | ${data.mainImage}`}
+        src={data.mainImage?.url}
+        alt={data.mainImage?.description}
         width="740"
         height="550"
         className="post__main-image"
@@ -24,11 +23,13 @@ export default function Post({ data, params }) {
         dangerouslySetInnerHTML={{ __html: data.content }}
       />
 
-      {data.files && (
+      {data?.files && (
         <section className="post__files">
-          {data.files.map((file) => (
-            <Link href={file} key={file}>
-              <p>{GetFileName(file)}</p>
+          {data?.files.map((file) => (
+            <Link href={file.url} key={file.id}>
+              <p>
+                {file.name} | {file.size}
+              </p>
             </Link>
           ))}
         </section>
@@ -38,15 +39,15 @@ export default function Post({ data, params }) {
         ← Wróć do bloga
       </Link>
 
-      {data.images && data.images[0] && (
+      {data?.images && (
         <>
           <hr className="post__border" />
           <section className="post__galery">
             {data.images.map((image) => (
               <ScaledImage
-                key={image}
-                src={image}
-                alt={`${data.title} | ${GetFileName(image)}`}
+                key={image.id}
+                src={image.url}
+                alt={image.description}
                 width="500"
                 height="500"
                 className="post__galery--image"

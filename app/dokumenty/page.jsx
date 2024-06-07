@@ -26,6 +26,7 @@ export default function Dokumenty() {
 
   const documents = data?.Documents || []
 
+  if (loading) return <h1>Ładowanie danych...</h1>
   if (error) return <h1>Błąd pobierania danych: {error.message}</h1>
 
   return (
