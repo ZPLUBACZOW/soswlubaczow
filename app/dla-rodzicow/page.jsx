@@ -29,7 +29,7 @@ export default function DlaRodzicow() {
       title="Dla Rodziców"
       titleSpan="Potrzebne informacje i dokumenty!"
       icon={svg}
-      props={forParents}
+      props={[...forParents].reverse()}
     />
   )
 }

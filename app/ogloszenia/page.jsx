@@ -51,7 +51,7 @@ export default function Ogloszenia() {
 
   return (
     <Tiles
-      props={announcements}
+      props={[...announcements].reverse()}
       title="Ogłoszenia"
       titleSpan="Ogłoszenia z naszej placówki!!"
       icon={svg}

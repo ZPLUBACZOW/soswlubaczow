@@ -34,7 +34,7 @@ export default function Dokumenty() {
       title="Dokumenty"
       titleSpan="Potrzebne dokumenty!"
       icon={svg}
-      props={documents}
+      props={[...documents].reverse()}
     />
   )
 }

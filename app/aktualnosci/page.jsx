@@ -25,7 +25,7 @@ export default function Aktualnosci() {
 
   return (
     <Tiles
-      props={transmissions}
+      props={[...transmissions].reverse()}
       title="Aktualności"
       titleSpan="Najnowsze wiadomości!!"
       icon={svg}
