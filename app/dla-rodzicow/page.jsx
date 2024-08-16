@@ -1,11 +1,8 @@
-'use client'
-
-import { useQuery } from '@apollo/client'
-import client from '@/lib/apolloClient'
-import { GET_FORPARENTS } from '@/lib/queries'
 import List from '@/template/list'
+import { getforParentsPosts } from '@/lib/queries'
 
-export default function DlaRodzicow() {
+export default async function dlaRodzicow() {
+  const forParents = await getforParentsPosts()
   const svg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,19 +14,12 @@ export default function DlaRodzicow() {
     </svg>
   )
 
-  const { loading, error, data } = useQuery(GET_FORPARENTS, { client })
-
-  const forParents = data?.ForParents || []
-
-  if (loading) return <h1>Ładowanie danych...</h1>
-  if (error) return <h1>Błąd pobierania danych: {error.message}</h1>
-
   return (
     <List
       title="Dla Rodziców"
       titleSpan="Potrzebne informacje i dokumenty!"
       icon={svg}
-      props={[...forParents].reverse()}
+      props={forParents}
     />
   )
 }

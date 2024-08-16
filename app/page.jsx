@@ -3,7 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Strona Główna | Specjalistyczny Ośrodek Szkolno-Wychowawczy w Lubaczowie',
+  title:
+    'Strona Główna | Specjalistyczny Ośrodek Szkolno-Wychowawczy w Lubaczowie',
 }
 
 export default function Home() {
@@ -16,10 +17,10 @@ export default function Home() {
 
       <div className="main-page__content">
         <p>
-          W naszym ośrodku zapewniamy edukację, wychowanie i terapię dzieciom i młodzieży
-          z niepełnosprawnością intelektualną w stopniu umiarkowanym, znacznym, głębokim,
-          z autyzmem, Zespołem Aspergera i innymi zaburzeniami rozwoju w przedziale
-          wiekowym od 3 do 25 roku życia.
+          W naszym ośrodku zapewniamy edukację, wychowanie i terapię dzieciom i
+          młodzieży z niepełnosprawnością intelektualną w stopniu umiarkowanym,
+          znacznym, głębokim, z autyzmem, Zespołem Aspergera i innymi
+          zaburzeniami rozwoju w przedziale wiekowym od 3 do 25 roku życia.
         </p>
 
         <Image
@@ -42,10 +43,10 @@ export default function Home() {
 
         <p>
           Zdając sobie sprawę z ograniczeń i słabości naszych podopiecznych, a
-          jednocześnie wierząc w możliwości poprawy jakości ich życia, za główny cel
-          przyjeliśmy wspieranie wszechstronnego rozwoju na miarę ich możliwości,
-          spełnienie oczekiwań, zaspokajanie potrzeb oraz wyposażenie uczniów w podstawowe
-          umiejetności życiowe i społeczne.
+          jednocześnie wierząc w możliwości poprawy jakości ich życia, za główny
+          cel przyjeliśmy wspieranie wszechstronnego rozwoju na miarę ich
+          możliwości, spełnienie oczekiwań, zaspokajanie potrzeb oraz
+          wyposażenie uczniów w podstawowe umiejetności życiowe i społeczne.
         </p>
       </div>
       <div className="main-page__declarations">

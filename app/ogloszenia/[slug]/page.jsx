@@ -1,23 +1,17 @@
-'use client'
-
-import { useQuery } from '@apollo/client'
-import client from '@/lib/apolloClient'
-import { GET_ANNOUNCEMENT } from '@/lib/queries'
 import Post from '@/template/post'
+import { getAnnouncementsPostBySlug } from '@/lib/queries'
 
-export default function AktualnosciPost({ params }) {
-  const index = params.slug.indexOf('ogloszenia/')
-  const slug = params.slug.substring(index)
+export async function generateMetadata({ params }) {
+  const announcements = await getAnnouncementsPostBySlug(params)
+  const title = announcements[0] ? announcements[0].title : '404'
 
-  const { loading, error, data } = useQuery(GET_ANNOUNCEMENT, {
-    variables: { slug: slug },
-    client,
-  })
+  return {
+    title: title,
+  }
+}
 
-  const announcement = data?.AnnouncementBySlug || []
+export default async function AktualnosciPost({ params }) {
+  const announcements = await getAnnouncementsPostBySlug(params)
 
-  if (loading) return <h1>Ładowanie danych...</h1>
-  if (error) return <h1>Błąd pobierania danych: {error.message}</h1>
-
-  return <Post data={announcement} params="ogloszenia" />
+  return <Post data={announcements} params="ogloszenia" />
 }
