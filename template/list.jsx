@@ -16,7 +16,7 @@ export default function List({ title, titleSpan, icon, props }) {
 
       <section className="list__container">
         {props.map((prop) => (
-          <Link href={prop.file.url} key={prop.id}>
+          <Link href={prop.file?.url || '#'} key={prop.id}>
             <div className="list__post">
               <svg
                 width="150"
