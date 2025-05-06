@@ -1,8 +1,8 @@
 import List from '@/template/list'
-import { getDocumentsPosts } from '@/lib/queries'
+import { getAvailabilities } from '@/lib/queries'
 
-export default async function Dokumenty() {
-  const documents = await getDocumentsPosts()
+export default async function Dostepnosc() {
+  const availabilities = await getAvailabilities()
   const svg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -21,10 +21,10 @@ export default async function Dokumenty() {
 
   return (
     <List
-      title="Dokumenty"
-      titleSpan="Potrzebne dokumenty!"
+      title="Dostępność"
+      titleSpan="Deklaracje dostępności!"
       icon={svg}
-      props={documents}
+      props={availabilities}
     />
   )
 }
