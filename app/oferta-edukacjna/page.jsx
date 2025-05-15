@@ -43,7 +43,7 @@ export default function OfretaEdukacjna() {
         <ol className="oferta-edukacjna__secondary--list">
           <li>Wczesne wspomaganie rozwoju dziecka</li>
           <li>Oddziały przedszkolne</li>
-          <li>Szkoła Podstawowa nr 3</li>
+          <li>Szkoła Podstawowa nr 3 </li>
           <li>Szkoła Specjalna Przysposabiająca Do Pracy</li>
           <li>Szkoła Branżowa I stopnia - kucharz</li>
           <li>Zespoły Rewalidacyjno-wychowawcze</li>
