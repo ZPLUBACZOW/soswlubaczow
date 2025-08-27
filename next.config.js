@@ -4,6 +4,7 @@ const nextConfig = {
     domains: ['media.graphassets.com'],
     svgAllow: true,
     dangerouslyAllowSVG: true,
+    unoptimized: true,
   },
 }
 
