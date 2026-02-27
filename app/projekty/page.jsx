@@ -1,7 +1,7 @@
 import Tiles from '@/template/tiles'
 import { getAnnouncementsPosts } from '@/lib/queries'
 
-export default async function Aktualnosci() {
+export default async function Projekty() {
   const announcements = await getAnnouncementsPosts()
   const svg = (
     <svg
@@ -43,10 +43,10 @@ export default async function Aktualnosci() {
   return (
     <Tiles
       props={announcements}
-      title="Ogłoszenia"
-      titleSpan="Ogłoszenia z naszej placówki!!"
+      title="Projekty"
+      titleSpan="Projekty w naszej placówce!!"
       icon={svg}
-      param="ogloszenia"
+      param="projekty"
     />
   )
 }

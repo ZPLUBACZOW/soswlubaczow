@@ -13,5 +13,5 @@ export async function generateMetadata({ params }) {
 export default async function AktualnosciPost({ params }) {
   const announcements = await getAnnouncementsPostBySlug(params)
 
-  return <Post data={announcements} params="ogloszenia" />
+  return <Post data={announcements} params="projekty" />
 }
